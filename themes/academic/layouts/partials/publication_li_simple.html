@@ -6,8 +6,10 @@
     {{ delimit . ", " | markdownify }}
     {{ end }}
   </div>
+  {{ if .Params.publication }}
   <div class="pub-publication">
     {{ .Params.publication | markdownify }}
   </div>
+  {{ end }}
   <p class="pub-links">{{ partial "publication_links" (dict "content" . "is_list" 1) }}</p>
 </li>
