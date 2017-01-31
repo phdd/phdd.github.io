@@ -1,5 +1,5 @@
 baseurl = "http://pehei.de"
-publishDir = "public"
+publishDir = "docs"
 
 title = "Peter Heisig"
 copyright = "&copy; 2017 Peter Heisig"
