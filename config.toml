@@ -1,4 +1,6 @@
 baseurl = "http://pehei.de"
+publishDir = "public"
+
 title = "Peter Heisig"
 copyright = "&copy; 2017 Peter Heisig"
 theme = "academic"

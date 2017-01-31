@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Peter Heisig</title>
+    <link>http://pehei.de/publication/index.xml</link>
+    <description>Recent content in Publications on Peter Heisig</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Peter Heisig</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Abstraktion verteilter Produktionsmaschinen in CPPS</title>
+      <link>http://pehei.de/publication/2016-12-07%20Abstraktion%20verteilter%20Produktionsmaschinen%20in%20cyber-physischen%20Produktionssystemen/</link>
+      <pubDate>Wed, 07 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://pehei.de/publication/2016-12-07%20Abstraktion%20verteilter%20Produktionsmaschinen%20in%20cyber-physischen%20Produktionssystemen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Natural Collocated Interactions for Merging Results with Mobile Devices</title>
+      <link>http://pehei.de/publication/2016-09-06%20Natural%20Collocated%20Interactions%20for%20Merging%20Results%20with%20Mobile%20Devices/</link>
+      <pubDate>Tue, 06 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://pehei.de/publication/2016-09-06%20Natural%20Collocated%20Interactions%20for%20Merging%20Results%20with%20Mobile%20Devices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Enabling Self-adaptive Workflows for Cyber-physical Systems</title>
+      <link>http://pehei.de/publication/2016-06-07%20Enabling%20Self-adaptive%20Workflows%20for%20Cyber-physical%20Systems/</link>
+      <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://pehei.de/publication/2016-06-07%20Enabling%20Self-adaptive%20Workflows%20for%20Cyber-physical%20Systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Betrachtung von MAPE-K Kontrollschleifen für Prozesse in CPS</title>
+      <link>http://pehei.de/publication/2016-02-23%20Betrachtung%20von%20MAPE-K%20Kontrollschleifen%20f%C3%BCr%20Prozesse%20in%20CPS/</link>
+      <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://pehei.de/publication/2016-02-23%20Betrachtung%20von%20MAPE-K%20Kontrollschleifen%20f%C3%BCr%20Prozesse%20in%20CPS/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
