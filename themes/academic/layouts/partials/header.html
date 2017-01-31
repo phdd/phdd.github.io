@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
+
   {{ .Hugo.Generator }}
   {{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
   {{ with .Site.Params.role }}<meta name="description" content="{{ . }}">{{ end }}
@@ -42,6 +43,12 @@
   <link rel="apple-touch-icon" type="image/png" href="{{ "/img/apple-touch-icon.png" | relURL }}">
 
   <link rel="canonical" href="{{ .Permalink }}">
+
+  {{ if .Site.Params.googleSiteVerification  }}
+  {{ with .Site.Params.googleSiteVerification }}
+  <meta name="google-site-verification" content="{{ . }}" />
+  {{ end }}
+  {{ end }}
 
   {{ partial "head_custom" . }}
 
