@@ -7,6 +7,7 @@ image_preview = ""
 math = true
 publication_types = ["3"]
 selected = false
+draft = true
 title = "Retrofitting with Surrogates for Cyber-Physical Production Systems"
 url_code = ""
 url_dataset = ""

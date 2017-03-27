@@ -1,12 +1,12 @@
 +++
 date = "2014-03-10T00:00:00"
-draft = false
 tags = ["jekyll"]
 title = "Migrate from Jekyll to Hugo"
 summary = """
 Learn how to migrate an existing website from Jekyll to Hugo.
 """
 math = false
+draft = true
 +++
 
 Here are a few tips for migrating an existing website from Jekyll to Hugo. These tips can be applied in conjunction with following Hugo Academic's [getting started guide]({{< ref "post/getting-started.md" >}}).

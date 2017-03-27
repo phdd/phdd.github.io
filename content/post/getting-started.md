@@ -1,9 +1,9 @@
 +++
 date = "2016-04-20T12:00:00"
-draft = false
 tags = ["academic", "hugo"]
 title = "Getting started with the Academic framework for Hugo"
 math = true
+draft = true
 summary = """
 Create a beautifully simple personal or academic website in under 10 minutes.
 """

@@ -1,9 +1,9 @@
 +++
 date = "2016-04-20T11:00:00"
-draft = false
 tags = ["academic", "hugo"]
 title = "Managing content"
 math = false
+draft = true
 +++
 
 This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, and news/blog articles. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< ref "post/writing-markdown-latex.md" >}}).<!--more-->
@@ -98,7 +98,7 @@ You can edit the title and add your own content, such as an introduction, by cre
     hugo new post/_index.md
     hugo new publication/_index.md
     hugo new talk/_index.md
-    
+
 Then remove all parameters except for `title`, `math`, `highlight`, and `date`. Edit the `title` parameter as desired and add any content after the `+++` preamble/frontmatter ends. For example, you should have something similar to:
 
 ```toml
