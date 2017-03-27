@@ -12,22 +12,6 @@
     
     
     <url>
-      <loc>http://pehei.de/project/cpps-retrofitting/</loc>
-      <lastmod>2017-01-31T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://pehei.de/talk/example-talk/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
       <loc>http://pehei.de/post/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
@@ -76,48 +60,8 @@
     
     
     <url>
-      <loc>http://pehei.de/post/getting-started/</loc>
-      <lastmod>2016-04-20T12:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://pehei.de/post/widgets/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://pehei.de/post/managing-content/</loc>
-      <lastmod>2016-04-20T11:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://pehei.de/post/writing-markdown-latex/</loc>
-      <lastmod>2016-04-20T10:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
       <loc>http://pehei.de/publication/betrachtung-von-mape-k-kontrollschleifen-f%C3%BCr-prozesse-in-cps/</loc>
       <lastmod>2016-02-23T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://pehei.de/post/migrate-from-jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -160,42 +104,6 @@
     
     
     <url>
-      <loc>http://pehei.de/tags/academic/</loc>
-      <lastmod>2016-04-20T12:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://pehei.de/tags/deep-learning/</loc>
-      <lastmod>2017-01-31T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://pehei.de/tags/hugo/</loc>
-      <lastmod>2016-04-20T12:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://pehei.de/tags/jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
       <loc>http://pehei.de/</loc>
       <lastmod>2017-01-31T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -205,24 +113,7 @@
     
     
     <url>
-      <loc>http://pehei.de/project/</loc>
-      <lastmod>2017-01-31T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
       <loc>http://pehei.de/publication_types/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://pehei.de/tags/</loc>
       <priority>0</priority>
     </url>
     
