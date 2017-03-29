@@ -6,7 +6,7 @@ branches:
     - source
 
 script:
-  - hugo
+  - hugo  --buildDrafts --renderToDisk
 
 after_success:
   - bash deploy.sh
