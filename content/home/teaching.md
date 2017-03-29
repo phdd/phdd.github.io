@@ -9,7 +9,7 @@ widget = "custom"
 weight = 60
 +++
 
-## Übung -- Softwaretechnologie I
+## Übung - Softwaretechnologie I
 
  &nbsp;                                                                                               | &nbsp;   | &nbsp;     | &nbsp;
 ------------------------------------------------------------------------------------------------------|----------|------------|--------------
