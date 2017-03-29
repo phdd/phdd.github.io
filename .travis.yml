@@ -2,8 +2,7 @@ sudo: required
 dist: trusty
 
 before_install:
-  - sudo apt-get -qq update
-  - wget https://github.com/spf13/hugo/releases/download/v0.14/hugo_0.14_amd64.deb
+  - wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19_amd64.deb
   - sudo dpkg -i hugo*.deb
 
 branches:
