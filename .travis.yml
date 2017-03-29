@@ -1,0 +1,17 @@
+language: go
+install: go get -v github.com/spf13/hugo
+
+branches:
+  only:
+    - source
+
+script:
+  - hugo
+
+after_success:
+  - bash deploy.sh
+
+env:
+  global:
+    - GH_REF: github.com/phdd/phdd.github.io.git
+    - secure: olkP9bd2LkBzxfx2aonutNT4o2dn0ec8pwK3S+7hrZt1m/cXbLhvLQDI08qBQpbQ5AFhqKcLTF29E+MNdmRzrPg5LhtZQEh0FxtPu1XBJ/Prnq+4uAxnULYJveZGNBUwVWZFZpHQyPT1m9Z01y8fVyaTkHlS9GFO6y9P/iPBt5aVrU1KmpUI83wgvYlRQ1IPtzdA3iu+v//cPYT5dy1WkwgggpcxGsyEQYwGcuLtEdJjuhUvLu+LyQSh3OuFZavgATfEZw9q99BOFDwc1H+3zmg6nqDCzWlXa08CiPsvFLRierMGsiye3Hams0xkKJPSJT5jU6Z/rvdbmEgbRYXbrgTHUOZ7xhARhb3Nvx754HpxTTPTJ3oTv1/T3ks6r+mPDNJopsrmpOG21lW8xOTtGpe7gazfoZ4kZYb5YHO1e4otuC54g1Q0P0VeLWRSDmZJjOvnlAEQDuBuJTQPc0om6CN9hpZidtiraj6wim2DakeD2jJCKsA0PlkITun7VRB+mC4G9tIFTFeDsACc/J0tKaWPGEjo7lKYSWzs1Wv3C3WmYmEFG1PHWTDGvaMJZvHdnyqZ4CAK9LkmWfYfPu9kVYVufOgVARSc8O4zCKiyqTYSfbJZelpX1T24a2l2kzZCH3YsgJP1EaHd7jMAFCJxbLaZZBZSNTkv703dOvc4w7o=
