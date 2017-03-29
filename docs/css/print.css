@@ -1,0 +1,37 @@
+@media all {
+  #biography { margin-bottom: 20px!important; }
+}
+
+@media not print {
+  .contact-desc,
+  .portrait-square,
+  .page-break	{
+    display: none;
+  }
+}
+
+@media print {
+  .pub-links,
+  .fa-chevron-up,
+  .contact-icon,
+  .portrait-social li,
+  .powered-by {
+    display: none !important;
+  }
+
+  .home-section {
+    padding: 20px 0 5px 0;
+  }
+
+  .page-break	{ display: block; page-break-before: always; }
+  .portrait-square {
+    display: block!important;
+    width: 20%;
+    margin: auto;
+  }
+
+  .portrait-title h2 { font-size: 2.5em!important; }
+  .portrait-title h3 { font-size: 1.5em!important; }
+  .section-heading h1 { font-size: 1.5em!important; }
+
+}
