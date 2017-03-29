@@ -1,12 +1,16 @@
-language: go
-install: go get -v github.com/spf13/hugo
+sudo: required
+language: generic
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y hugo
 
 branches:
   only:
     - source
 
 script:
-  - hugo  --buildDrafts --renderToDisk
+  - hugo
 
 after_success:
   - bash deploy.sh
