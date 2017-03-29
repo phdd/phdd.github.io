@@ -31,7 +31,6 @@ weight = 60
  &nbsp;                                                                                               | 10.05.17 | 4.&nbsp;DS | HSZ&nbsp;204
  &nbsp;                                                                                               | 12.05.17 | 2.&nbsp;DS | HSZ&nbsp;304
  Entwurfsmuster I                                                                                     | 16.05.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 17.05.17 | 4.&nbsp;DS | HSZ&nbsp;204
  &nbsp;                                                                                               | 19.05.17 | 2.&nbsp;DS | HSZ&nbsp;304
  Entwurfsmuster II                                                                                    | 23.05.17 | 4.&nbsp;DS | HSZ&nbsp;101
  &nbsp;                                                                                               | 24.05.17 | 4.&nbsp;DS | HSZ&nbsp;204
