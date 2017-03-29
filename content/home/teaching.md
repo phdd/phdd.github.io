@@ -11,7 +11,7 @@ weight = 60
 
 <!--
 {{% alert note %}}
-Bla bla.
+
 {{% /alert %}}
 <br>
 -->
@@ -67,5 +67,5 @@ Bla bla.
 ## Sonstiges
 
  &nbsp;                            | &nbsp;   | &nbsp;      | &nbsp;
------------------------------------|----------|-------------|---------
- Lernraum<br>Softwaretechnologie I | Freitags | 3.&nbsp;DS  | *TBA*
+-----------------------------------|----------|-------------|---------------
+ Lernraum<br>Softwaretechnologie I | Freitags | 3.&nbsp;DS  | APB&nbsp;E046
