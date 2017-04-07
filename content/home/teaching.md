@@ -62,4 +62,4 @@ weight = 60
 
  &nbsp;                            | &nbsp;   | &nbsp;      | &nbsp;
 -----------------------------------|----------|-------------|---------------
- Lernraum<br>Softwaretechnologie I | Freitags | 3.&nbsp;DS  | APB&nbsp;E046
+ Lernraum<br>Softwaretechnologie I | Freitags | 4.&nbsp;DS  | APB&nbsp;E040
