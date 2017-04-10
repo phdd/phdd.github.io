@@ -12,7 +12,7 @@ weight = 60
 ## Übung -- Softwaretechnologie I
 
 <p class="right">
-{{% btn Aufgaben "https://tu-dresden.de/ing/informatik/smt/st/studium/lehrveranstaltungen?subject=341&lang=de&leaf=2&head=3&embedding_id=47eddfa7c5a54ed5be49042aff35a31b" %}}{{% btn Slides "https://slides.com/phdd" %}}
+{{% btn Aufgaben "https://tu-dresden.de/ing/informatik/smt/st/studium/lehrveranstaltungen?subject=341&lang=de&leaf=2&head=3&embedding_id=47eddfa7c5a54ed5be49042aff35a31b" %}}{{% btn Slides "https://slides.com/phdd" %}}{{% btn INLOOP "https://inloop.inf.tu-dresden.de/" %}}
 </p>
 
  &nbsp;                                                                                               | &nbsp;   | &nbsp;     | &nbsp;
