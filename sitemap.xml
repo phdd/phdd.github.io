@@ -4,6 +4,14 @@
     
     
     <url>
+      <loc>http://pehei.de/post/hinweise-softwaretechnologie-1/</loc>
+      <lastmod>2017-04-11T15:08:14+02:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>http://pehei.de/publication/proteus&#43;&#43;-a-self-managed-iot-workflow-engine-with-dynamic-service-discovery/</loc>
       <lastmod>2017-02-14T00:00:00+00:00</lastmod>
     </url>
@@ -104,6 +112,15 @@
     
     
     <url>
+      <loc>http://pehei.de/tags/lehre/</loc>
+      <lastmod>2017-04-11T15:08:14+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>http://pehei.de/</loc>
       <lastmod>2017-01-31T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -114,6 +131,32 @@
     
     <url>
       <loc>http://pehei.de/publication_types/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>http://pehei.de/tags/st-i/</loc>
+      <lastmod>2017-04-11T15:08:14+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>http://pehei.de/tags/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>http://pehei.de/tags/tu-dresden/</loc>
+      <lastmod>2017-04-11T15:08:14+02:00</lastmod>
       <priority>0</priority>
     </url>
     
