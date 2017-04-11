@@ -6,7 +6,7 @@ title = "Teaching"
 subtitle = ""
 widget = "custom"
 
-weight = 60
+weight = 3
 +++
 
 ## Übung -- Softwaretechnologie I
