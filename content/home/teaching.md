@@ -9,6 +9,11 @@ widget = "custom"
 weight = 60
 +++
 
+{{% alert note %}}
+Durch Feiertage u.ä. ausfallende Übungen werden **nicht** nachgeholt.
+Bitte weichen Sie auf andere Termine (vgl. [Zeitplan](https://tu-dresden.de/ing/informatik/smt/st/studium/lehrveranstaltungen?subject=341&lang=de&leaf=1&head=5&embedding_id=47eddfa7c5a54ed5be49042aff35a31b)), aus.
+{{% /alert %}}
+
 ## Übung -- Softwaretechnologie I
 
 <p class="right">
