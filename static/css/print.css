@@ -15,7 +15,8 @@
   .fa-chevron-up,
   .contact-icon,
   .portrait-social li,
-  .powered-by {
+  .powered-by,
+  .share-box {
     display: none !important;
   }
 

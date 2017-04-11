@@ -8,7 +8,7 @@ enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = ""
+disqusShortname = "pehei"
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = "UA-3690899-5"
@@ -91,7 +91,7 @@ defaultContentLanguageInSubdir = false
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
   custom_css = [ 'print.css', 'custom.css' ]
-  custom_js  = []
+  custom_js  = [ 'init.js', 'hyphenation.js' ]
 
   # Publication types.
   #   Used to categorize publications.
@@ -175,10 +175,10 @@ defaultContentLanguageInSubdir = false
   url = "#publications"
   weight = 2
 
-#[[menu.main]]
-#  name = "Posts"
-#  url = "#posts"
-#  weight = 3
+[[menu.main]]
+  name = "Posts"
+  url = "#posts"
+  weight = 3
 
 #[[menu.main]]
 #  name = "Projects"
