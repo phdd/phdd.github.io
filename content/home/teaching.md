@@ -25,7 +25,7 @@ weight = 3
  CRC-Karten-Methode<br>bitte 5 bis 10 DIN A6 Karteikarten mitbringen                                  | 18.04.17 | 4.&nbsp;DS | HSZ&nbsp;101
  &nbsp;                                                                                               | 19.04.17 | 4.&nbsp;DS | HSZ&nbsp;204
  &nbsp;                                                                                               | 21.04.17 | 2.&nbsp;DS | HSZ&nbsp;304
- Java III<br>Tests mit JUnit und Dokumentation mit Javadoc                                            | 25.04.17 | 4.&nbsp;DS | HSZ&nbsp;101
+ Java III<br>Testen mit JUnit                                                                         | 25.04.17 | 4.&nbsp;DS | HSZ&nbsp;101
  &nbsp;                                                                                               | 26.04.17 | 4.&nbsp;DS | HSZ&nbsp;204
  &nbsp;                                                                                               | 28.04.17 | 2.&nbsp;DS | HSZ&nbsp;304
  Generics und Java-Collection-Framework                                                               | 02.05.17 | 4.&nbsp;DS | HSZ&nbsp;101

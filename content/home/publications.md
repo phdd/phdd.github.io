@@ -10,7 +10,7 @@ subtitle = ""
 widget = "publications"
 
 # Order that this section will appear in.
-weight = 4
+weight = 2
 
 # Number of publications to list.
 count = 10
