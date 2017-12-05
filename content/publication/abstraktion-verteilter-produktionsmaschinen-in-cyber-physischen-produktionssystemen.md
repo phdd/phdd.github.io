@@ -6,7 +6,7 @@ image = ""
 image_preview = ""
 math = true
 publication_types = ["8"]
-publication = ""
+publication = "Online"
 publication_short = ""
 description = "Diploma Thesis (Dipl.-Inf.)"
 selected = false
@@ -17,6 +17,8 @@ url_pdf = "https://phdd.github.io/diplom/thesis.pdf"
 url_project = ""
 url_slides = "https://github.com/phdd/diplom/raw/master/Verteidigung.final.pdf"
 url_video = ""
+
+projects = []
 
 [[url_custom]]
 name = "DOI"

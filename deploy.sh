@@ -7,7 +7,7 @@ git clone "https://${GH_TOKEN}@${GH_REF}" master
 
 cd master
 git checkout master
-cp -r ../docs/* ./
+cp -r ../public/* ./
 
 git add .
 git commit -m "Deploy to GitHub Page"

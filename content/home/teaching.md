@@ -1,65 +1,20 @@
 +++
-date = "2017-03-27T15:00:00"
-draft = false
-
-title = "Teaching"
-subtitle = ""
+# Custom widget.
+# An example of using the custom widget to create your own homepage section.
+# To create more sections, duplicate this file and edit the values below as desired.
 widget = "custom"
+active = false
+date = "2016-04-20T00:00:00"
 
-weight = 3
+# Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
+title = "Custom Section"
+subtitle = ""
+
+# Order that this section will appear in.
+weight = 60
+
 +++
 
-## Übung -- Softwaretechnologie I
+This is an example of using the *custom* widget to create your own homepage section.
 
-<p class="right">
-{{% btn Aufgaben "https://tu-dresden.de/ing/informatik/smt/st/studium/lehrveranstaltungen?subject=341&lang=de&leaf=2&head=3&embedding_id=47eddfa7c5a54ed5be49042aff35a31b" %}}{{% btn Slides "https://slides.com/phdd" %}}{{% btn Auditorium "https://auditorium.inf.tu-dresden.de/de/groups/110406004" %}}{{% btn INLOOP "https://inloop.inf.tu-dresden.de/" %}}
-</p>
-
- &nbsp;                                                                                               | &nbsp;   | &nbsp;     | &nbsp;
-------------------------------------------------------------------------------------------------------|----------|------------|--------------
- Java I<br>Objekte und Klassen                                                                        | 04.04.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 05.04.17 | 4.&nbsp;DS | HSZ&nbsp;204
- &nbsp;                                                                                               | 07.04.17 | 2.&nbsp;DS | HSZ&nbsp;304
- Java II<br>Vererbung und Polymorphie                                                                 | 11.04.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 12.04.17 | 4.&nbsp;DS | HSZ&nbsp;204
- CRC-Karten-Methode<br>bitte 5 bis 10 DIN A6 Karteikarten mitbringen                                  | 18.04.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 19.04.17 | 4.&nbsp;DS | HSZ&nbsp;204
- &nbsp;                                                                                               | 21.04.17 | 2.&nbsp;DS | HSZ&nbsp;304
- Java III<br>Testen mit JUnit                                                                         | 25.04.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 26.04.17 | 4.&nbsp;DS | HSZ&nbsp;204
- &nbsp;                                                                                               | 28.04.17 | 2.&nbsp;DS | HSZ&nbsp;304
- Generics und Java-Collection-Framework                                                               | 02.05.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 03.05.17 | 4.&nbsp;DS | HSZ&nbsp;204
- &nbsp;                                                                                               | 05.05.17 | 2.&nbsp;DS | HSZ&nbsp;304
- Java-Collection-Framework und Graphen in Java                                                        | 09.05.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 10.05.17 | 4.&nbsp;DS | HSZ&nbsp;204
- &nbsp;                                                                                               | 12.05.17 | 2.&nbsp;DS | HSZ&nbsp;304
- Entwurfsmuster I                                                                                     | 16.05.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 19.05.17 | 2.&nbsp;DS | HSZ&nbsp;304
- Entwurfsmuster II                                                                                    | 23.05.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 24.05.17 | 4.&nbsp;DS | HSZ&nbsp;204
- &nbsp;                                                                                               | 26.05.17 | 2.&nbsp;DS | HSZ&nbsp;304
- Objektorientierte Analyse I<br>UML-Klassendiagramme                                                  | 30.05.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 31.05.17 | 4.&nbsp;DS | HSZ&nbsp;204
- &nbsp;                                                                                               | 02.06.17 | 2.&nbsp;DS | HSZ&nbsp;304
- Objektorientierte Analyse II<br>UML-Klassendiagramme                                                 | 13.06.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 14.06.17 | 4.&nbsp;DS | HSZ&nbsp;204
- &nbsp;                                                                                               | 16.06.17 | 2.&nbsp;DS | HSZ&nbsp;304
- Objektorientierte Analyse III<br>UML-Zustandsdiagramme                                               | 20.06.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 21.06.17 | 4.&nbsp;DS | HSZ&nbsp;204
- &nbsp;                                                                                               | 23.06.17 | 2.&nbsp;DS | HSZ&nbsp;304
- Objektorientierte Analyse III<br>Architekturmodellierung und Szenarioanalyse für Anwendungsfälle     | 27.06.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 28.06.17 | 4.&nbsp;DS | HSZ&nbsp;204
- &nbsp;                                                                                               | 30.06.17 | 2.&nbsp;DS | HSZ&nbsp;304
- Objektorientierter Entwurf und Implementierung                                                       | 04.07.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 05.07.17 | 4.&nbsp;DS | HSZ&nbsp;204
- &nbsp;                                                                                               | 07.07.17 | 2.&nbsp;DS | HSZ&nbsp;304
- Konsultation in Vorbereitung auf die Klausur                                                         | 11.07.17 | 4.&nbsp;DS | HSZ&nbsp;101
- &nbsp;                                                                                               | 12.07.17 | 4.&nbsp;DS | HSZ&nbsp;204
- &nbsp;                                                                                               | 14.07.17 | 2.&nbsp;DS | HSZ&nbsp;304
-
-## Sonstiges
-
- &nbsp;                            | &nbsp;   | &nbsp;      | &nbsp;
------------------------------------|----------|-------------|---------------
- Lernraum<br>Softwaretechnologie I | Freitags | 4.&nbsp;DS  | APB&nbsp;E040
+To remove this section, either delete `content/home/teaching.md` or edit the frontmatter of the file to deactivate the widget by setting `active = false`.
