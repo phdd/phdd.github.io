@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
     
     <url>
-      <loc>http://pehei.de/post/hinweise-softwaretechnologie/</loc>
-      <lastmod>2017-04-11T15:08:14+02:00</lastmod>
+    
+      <loc>http://pehei.de/publication/toward-a-framework-for-self-adaptive-workflows-in-cyber-physical-systems/</loc>
+      <lastmod>2017-11-01T00:00:00+00:00</lastmod>
     </url>
     
   
     
     
     <url>
+    
       <loc>http://pehei.de/publication/proteus&#43;&#43;-a-self-managed-iot-workflow-engine-with-dynamic-service-discovery/</loc>
       <lastmod>2017-02-14T00:00:00+00:00</lastmod>
     </url>
@@ -20,6 +22,7 @@
     
     
     <url>
+    
       <loc>http://pehei.de/post/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
@@ -28,6 +31,7 @@
     
     
     <url>
+    
       <loc>http://pehei.de/publication/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
@@ -36,6 +40,7 @@
     
     
     <url>
+    
       <loc>http://pehei.de/talk/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
@@ -44,6 +49,7 @@
     
     
     <url>
+    
       <loc>http://pehei.de/publication/abstraktion-verteilter-produktionsmaschinen-in-cyber-physischen-produktionssystemen/</loc>
       <lastmod>2016-12-07T00:00:00+00:00</lastmod>
     </url>
@@ -52,6 +58,7 @@
     
     
     <url>
+    
       <loc>http://pehei.de/publication/natural-collocated-interactions-for-merging-results-with-mobile-devices/</loc>
       <lastmod>2016-09-06T00:00:00+00:00</lastmod>
     </url>
@@ -60,6 +67,7 @@
     
     
     <url>
+    
       <loc>http://pehei.de/publication/enabling-self-adaptive-workflows-for-cyber-physical-systems/</loc>
       <lastmod>2016-06-07T00:00:00+00:00</lastmod>
     </url>
@@ -68,6 +76,7 @@
     
     
     <url>
+    
       <loc>http://pehei.de/publication/betrachtung-von-mape-k-kontrollschleifen-f%C3%BCr-prozesse-in-cps/</loc>
       <lastmod>2016-02-23T00:00:00+00:00</lastmod>
     </url>
@@ -76,6 +85,7 @@
     
     
     <url>
+    
       <loc>http://pehei.de/publication_types/1/</loc>
       <lastmod>2016-09-06T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -85,6 +95,17 @@
     
     
     <url>
+    
+      <loc>http://pehei.de/publication_types/2/</loc>
+      <lastmod>2017-11-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://pehei.de/publication_types/6/</loc>
       <lastmod>2016-06-07T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -94,6 +115,7 @@
     
     
     <url>
+    
       <loc>http://pehei.de/publication_types/7/</loc>
       <lastmod>2017-02-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -103,6 +125,7 @@
     
     
     <url>
+    
       <loc>http://pehei.de/publication_types/8/</loc>
       <lastmod>2016-12-07T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -112,8 +135,8 @@
     
     
     <url>
-      <loc>http://pehei.de/tags/lehre/</loc>
-      <lastmod>2017-04-11T15:08:14+02:00</lastmod>
+    
+      <loc>http://pehei.de/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -121,8 +144,9 @@
     
     
     <url>
+    
       <loc>http://pehei.de/</loc>
-      <lastmod>2017-01-31T00:00:00+00:00</lastmod>
+      <lastmod>2017-12-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -130,7 +154,9 @@
     
     
     <url>
+    
       <loc>http://pehei.de/publication_types/</loc>
+      <lastmod>2016-09-06T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -138,25 +164,8 @@
     
     
     <url>
-      <loc>http://pehei.de/tags/st-i/</loc>
-      <lastmod>2017-04-11T15:08:14+02:00</lastmod>
-      <priority>0</priority>
-    </url>
     
-  
-    
-    
-    <url>
       <loc>http://pehei.de/tags/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>http://pehei.de/tags/tu-dresden/</loc>
-      <lastmod>2017-04-11T15:08:14+02:00</lastmod>
       <priority>0</priority>
     </url>
     

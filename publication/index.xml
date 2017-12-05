@@ -2,13 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on Peter Heisig</title>
-    <link>http://pehei.de/publication/index.xml</link>
+    <link>http://pehei.de/publication/</link>
     <description>Recent content in Publications on Peter Heisig</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Peter Heisig</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/publication/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Toward a framework for self-adaptive workflows in cyber-physical systems</title>
+      <link>http://pehei.de/publication/toward-a-framework-for-self-adaptive-workflows-in-cyber-physical-systems/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://pehei.de/publication/toward-a-framework-for-self-adaptive-workflows-in-cyber-physical-systems/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>PROtEUS&#43;&#43;: A Self-managed IoT Workflow Engine with Dynamic Service Discovery</title>

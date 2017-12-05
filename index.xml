@@ -2,54 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Peter Heisig on Peter Heisig</title>
-    <link>http://pehei.de/index.xml</link>
+    <link>http://pehei.de/</link>
     <description>Recent content in Peter Heisig on Peter Heisig</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Peter Heisig</copyright>
-    <lastBuildDate>Tue, 31 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Hinweise - Softwaretechnologie I</title>
-      <link>http://pehei.de/post/hinweise-softwaretechnologie/</link>
-      <pubDate>Tue, 11 Apr 2017 15:08:14 +0200</pubDate>
+      <title>Toward a framework for self-adaptive workflows in cyber-physical systems</title>
+      <link>http://pehei.de/publication/toward-a-framework-for-self-adaptive-workflows-in-cyber-physical-systems/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://pehei.de/post/hinweise-softwaretechnologie/</guid>
-      <description>
-
-&lt;h2 id=&#34;ausfallende-übungen&#34;&gt;ausfallende Übungen&lt;/h2&gt;
-
-&lt;p&gt;Leider können Übungen, die z.B. durch Feiertage ausfallen nicht nachgeholt werden. Betroffene Studenten müssen ersatzweise andere Übungen besuchen. Eine Liste von Zeitpunkten finden Sie auf den Seiten der Lehrveranstaltung&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:termine&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:termine&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;uml-modellierung&#34;&gt;UML-Modellierung&lt;/h2&gt;
-
-&lt;p&gt;Grundsätzlich hat die Fakultät Lizenzen für &lt;em&gt;MagicDraw&lt;/em&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:magicdraw&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:magicdraw&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, einer Software zur Modellierung von Softwaresystemen mit der UML&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:uml&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:uml&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. Dennoch gibt es gute (Online-)Tools, mit denen das Erstellen einfacher Modelle teils auch kollaborativ möglich ist. Abgesehen davon erschlagen die meisten Modellierungswerkzeuge, ja, auch MagicDraw, den Nutzer mit Features und bunten Knöpfen.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://draw.io&#34; target=&#34;_blank&#34;&gt;draw.io&lt;/a&gt; &amp;ndash; Diagramme, auch über die UML hinaus&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://yuml.me/&#34; target=&#34;_blank&#34;&gt;yUML.me&lt;/a&gt; &amp;ndash; Sprache zur Beschreibung einfacher Diagramme&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.visual-paradigm.com/&#34; target=&#34;_blank&#34;&gt;Visual Paradigm&lt;/a&gt; &amp;ndash; umfassende Modellierungssoftware mit Community-Lizenz&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Die Diagramme in meiner Übung&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:slides&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:slides&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; sind zum Beispiel mit &lt;a href=&#34;https://draw.io&#34; target=&#34;_blank&#34;&gt;draw.io&lt;/a&gt; gebaut.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:termine&#34;&gt;&lt;a href=&#34;https://tu-dresden.de/ing/informatik/smt/st/studium/lehrveranstaltungen?subject=341&amp;amp;lang=de&amp;amp;leaf=1&amp;amp;head=5&amp;amp;embedding_id=47eddfa7c5a54ed5be49042aff35a31b&#34; target=&#34;_blank&#34;&gt;https://tu-dresden.de/ing/informatik/smt/st/studium/lehrveranstaltungen?subject=341&amp;amp;lang=de&amp;amp;leaf=1&amp;amp;head=5&amp;amp;embedding_id=47eddfa7c5a54ed5be49042aff35a31b&lt;/a&gt;&lt;br /&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:termine&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:magicdraw&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/MagicDraw&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/MagicDraw&lt;/a&gt;&lt;br /&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:magicdraw&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:uml&#34;&gt;&lt;a href=&#34;https://de.wikipedia.org/wiki/Unified_Modeling_Language&#34; target=&#34;_blank&#34;&gt;https://de.wikipedia.org/wiki/Unified_Modeling_Language&lt;/a&gt;&lt;br /&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:uml&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:slides&#34;&gt;&lt;a href=&#34;https://slides.com/phdd&#34; target=&#34;_blank&#34;&gt;https://slides.com/phdd&lt;/a&gt;&lt;br /&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:slides&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <guid>http://pehei.de/publication/toward-a-framework-for-self-adaptive-workflows-in-cyber-physical-systems/</guid>
+      <description></description>
     </item>
     
     <item>
