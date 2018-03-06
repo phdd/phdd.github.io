@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>http://pehei.de/post/thunderbird-taiga-integration/</loc>
+      <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://pehei.de/publication/toward-a-framework-for-self-adaptive-workflows-in-cyber-physical-systems/</loc>
       <lastmod>2017-11-01T00:00:00+00:00</lastmod>
     </url>
@@ -165,7 +174,38 @@
     
     <url>
     
+      <loc>http://pehei.de/tags/software/</loc>
+      <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://pehei.de/tags/</loc>
+      <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://pehei.de/tags/taiga/</loc>
+      <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://pehei.de/tags/thunderbird/</loc>
+      <lastmod>2018-03-06T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

@@ -10,5 +10,29 @@
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title>Thunderbird Taiga Integration</title>
+      <link>http://pehei.de/post/thunderbird-taiga-integration/</link>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://pehei.de/post/thunderbird-taiga-integration/</guid>
+      <description>
+
+&lt;p&gt;Convert Thunderbirds mails to user stories, tasks and tickets for the &lt;a href=&#34;https://taiga.io&#34; target=&#34;_blank&#34;&gt;Taiga project management system&lt;/a&gt;.
+You can get the plugin at &lt;a href=&#34;https://addons.mozilla.org/de/thunderbird/addon/thunderbird-taiga-integration/&#34; target=&#34;_blank&#34;&gt;thunderbird&amp;rsquo;s addon repository&lt;/a&gt;.
+And if you like to contribute go to my the &lt;a href=&#34;https://github.com/phdd/thunderbird-taiga-integration&#34; target=&#34;_blank&#34;&gt;GitHub repository&lt;/a&gt;.
+Those sources are licensed under the &lt;a href=&#34;http://mozilla.org/MPL/2.0/&#34; target=&#34;_blank&#34;&gt;Mozilla Public
+License, v. 2.0&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;token-authentication&#34;&gt;Token Authentication&lt;/h2&gt;
+
+&lt;p&gt;Since Taiga&amp;rsquo;s application token flow is unusable, authentication is done via the user&amp;rsquo;s Bearer-Token.
+To obtain this token open the developer console and get it from the application&amp;rsquo;s local storage.
+The following screencast illustrates this slightly hacky solution.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://pehei.de/img/thunderbird-taiga-integration/token-screencast.gif&#34; alt=&#34;Obtain User Token&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
