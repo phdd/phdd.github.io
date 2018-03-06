@@ -37,4 +37,4 @@ The following screencast illustrates this slightly hacky solution.
 ![Obtain User Token](/img/thunderbird-taiga-integration/token-screencast.gif)
 
 Feel free to comment and give some feedback. For all the technical stuff, bug reports, pull requests, etc., please go to the 
-[GitHub repository](https://github.com/phdd/thunderbird-taiga-integration) and *contribute*. 
+[GitHub repository](https://github.com/phdd/thunderbird-taiga-integration) and **contribute**. 
