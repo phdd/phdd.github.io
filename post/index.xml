@@ -33,6 +33,9 @@ To obtain this token open the developer console and get it from the application&
 The following screencast illustrates this slightly hacky solution.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://pehei.de/img/thunderbird-taiga-integration/token-screencast.gif&#34; alt=&#34;Obtain User Token&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Feel free to comment and give some feedback. For all the technical stuff, bug reports, pull requests, etc., please go to the
+&lt;a href=&#34;https://github.com/phdd/thunderbird-taiga-integration&#34; target=&#34;_blank&#34;&gt;GitHub repository&lt;/a&gt; and &lt;em&gt;contribute&lt;/em&gt;.&lt;/p&gt;
 </description>
     </item>
     
