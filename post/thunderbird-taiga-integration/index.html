@@ -227,7 +227,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
@@ -289,7 +289,7 @@
       <div class="article-style" itemprop="articleBody">
         
 
-<p>Like described in the <em>Getting Things Done</em> methodology we have to cope with a large amount of incoming information and E-mails are outdated, but still heavily used. They are trapped in our client software, only transferable by copy and paste. Thus we need a way to import those into our favorite project management system to actually get things done. Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose.</p>
+<p>As described in the <em>Getting Things Done</em> methodology we have to cope with a large amount of incoming information; E-mails are outdated, but still heavily used. They are trapped in our client software, only transferable by copy and paste. Thus we need a way to import those into our favorite project management system to actually get things done. Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose.</p>
 
 <p>It converts Thunderbirds mails to user stories, tasks and tickets for the <a href="https://taiga.io" target="_blank">Taiga project management system</a>.
 You can get the plugin at <a href="https://addons.mozilla.org/de/thunderbird/addon/thunderbird-taiga-integration/" target="_blank">thunderbird&rsquo;s addon repository</a>.
@@ -297,10 +297,15 @@ And if you like to contribute go to my the <a href="https://github.com/phdd/thun
 Those sources are licensed under the <a href="http://mozilla.org/MPL/2.0/" target="_blank">Mozilla Public
 License, v. 2.0</a>.</p>
 
-<h2 id="token-authentication">Token Authentication</h2>
+<h2 id="usage">Usage</h2>
 
-<p>Since Taiga&rsquo;s application token flow is unusable, authentication is done via the user&rsquo;s Bearer-Token.
-To obtain this token open the developer console and get it from the application&rsquo;s local storage.
+<p>There are two ways to this addon. Right click on an E-mail and choose <code>Taiga</code> or select one and do likewise through <code>Message &gt; Taiga</code>. If any of the menu seems disabled, there might be something wrong with the addon&rsquo;s settings.</p>
+
+<h3 id="authentication">Authentication</h3>
+
+<p>The user authenticates with a token against any Taiga-instance. There&rsquo;s an application token, especially for this addon&rsquo;s use-case, and a user token authenticating the user himself.
+Since Taiga&rsquo;s application token flow is rather unusable, authentication is done via the user&rsquo;s bearer-token.
+To obtain this token, log in to your Taiga, open the developer console and get it from the application&rsquo;s local storage.
 The following screencast illustrates this slightly hacky solution.</p>
 
 <p><img src="/img/thunderbird-taiga-integration/token-screencast.gif" alt="Obtain User Token" /></p>

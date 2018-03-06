@@ -18,7 +18,7 @@
       <guid>http://pehei.de/post/thunderbird-taiga-integration/</guid>
       <description>
 
-&lt;p&gt;Like described in the &lt;em&gt;Getting Things Done&lt;/em&gt; methodology we have to cope with a large amount of incoming information and E-mails are outdated, but still heavily used. They are trapped in our client software, only transferable by copy and paste. Thus we need a way to import those into our favorite project management system to actually get things done. Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose.&lt;/p&gt;
+&lt;p&gt;As described in the &lt;em&gt;Getting Things Done&lt;/em&gt; methodology we have to cope with a large amount of incoming information; E-mails are outdated, but still heavily used. They are trapped in our client software, only transferable by copy and paste. Thus we need a way to import those into our favorite project management system to actually get things done. Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose.&lt;/p&gt;
 
 &lt;p&gt;It converts Thunderbirds mails to user stories, tasks and tickets for the &lt;a href=&#34;https://taiga.io&#34; target=&#34;_blank&#34;&gt;Taiga project management system&lt;/a&gt;.
 You can get the plugin at &lt;a href=&#34;https://addons.mozilla.org/de/thunderbird/addon/thunderbird-taiga-integration/&#34; target=&#34;_blank&#34;&gt;thunderbird&amp;rsquo;s addon repository&lt;/a&gt;.
@@ -26,10 +26,15 @@ And if you like to contribute go to my the &lt;a href=&#34;https://github.com/ph
 Those sources are licensed under the &lt;a href=&#34;http://mozilla.org/MPL/2.0/&#34; target=&#34;_blank&#34;&gt;Mozilla Public
 License, v. 2.0&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;token-authentication&#34;&gt;Token Authentication&lt;/h2&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 
-&lt;p&gt;Since Taiga&amp;rsquo;s application token flow is unusable, authentication is done via the user&amp;rsquo;s Bearer-Token.
-To obtain this token open the developer console and get it from the application&amp;rsquo;s local storage.
+&lt;p&gt;There are two ways to this addon. Right click on an E-mail and choose &lt;code&gt;Taiga&lt;/code&gt; or select one and do likewise through &lt;code&gt;Message &amp;gt; Taiga&lt;/code&gt;. If any of the menu seems disabled, there might be something wrong with the addon&amp;rsquo;s settings.&lt;/p&gt;
+
+&lt;h3 id=&#34;authentication&#34;&gt;Authentication&lt;/h3&gt;
+
+&lt;p&gt;The user authenticates with a token against any Taiga-instance. There&amp;rsquo;s an application token, especially for this addon&amp;rsquo;s use-case, and a user token authenticating the user himself.
+Since Taiga&amp;rsquo;s application token flow is rather unusable, authentication is done via the user&amp;rsquo;s bearer-token.
+To obtain this token, log in to your Taiga, open the developer console and get it from the application&amp;rsquo;s local storage.
 The following screencast illustrates this slightly hacky solution.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://pehei.de/img/thunderbird-taiga-integration/token-screencast.gif&#34; alt=&#34;Obtain User Token&#34; /&gt;&lt;/p&gt;
