@@ -18,7 +18,9 @@
       <guid>http://pehei.de/post/thunderbird-taiga-integration/</guid>
       <description>
 
-&lt;p&gt;Convert Thunderbirds mails to user stories, tasks and tickets for the &lt;a href=&#34;https://taiga.io&#34; target=&#34;_blank&#34;&gt;Taiga project management system&lt;/a&gt;.
+&lt;p&gt;Like described in the &lt;em&gt;Getting Things Done&lt;/em&gt; methodology we have to cope with a large amount of incoming information and E-mails are outdated, but still heavily used. They are trapped in our client software, only transferable by copy and paste. Thus we need a way to import those into our favorite project management system to actually get things done. Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose.&lt;/p&gt;
+
+&lt;p&gt;It converts Thunderbirds mails to user stories, tasks and tickets for the &lt;a href=&#34;https://taiga.io&#34; target=&#34;_blank&#34;&gt;Taiga project management system&lt;/a&gt;.
 You can get the plugin at &lt;a href=&#34;https://addons.mozilla.org/de/thunderbird/addon/thunderbird-taiga-integration/&#34; target=&#34;_blank&#34;&gt;thunderbird&amp;rsquo;s addon repository&lt;/a&gt;.
 And if you like to contribute go to my the &lt;a href=&#34;https://github.com/phdd/thunderbird-taiga-integration&#34; target=&#34;_blank&#34;&gt;GitHub repository&lt;/a&gt;.
 Those sources are licensed under the &lt;a href=&#34;http://mozilla.org/MPL/2.0/&#34; target=&#34;_blank&#34;&gt;Mozilla Public
