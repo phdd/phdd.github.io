@@ -23,6 +23,8 @@ And if you like to contribute go to my the [GitHub repository](https://github.co
 Those sources are licensed under the [Mozilla Public
 License, v. 2.0](http://mozilla.org/MPL/2.0/).
 
+Please keep in mind, that this is an early version missing some of the aforementioned features. When I get the time, it'll move forward. Another way ist community contributions, obviously. 
+
 ## Usage
 
 There are two ways to this addon. Right click on an E-mail and choose `Taiga` or select one and do likewise through `Message > Taiga`. If any of the menu seems disabled, there might be something wrong with the addon's settings. 
