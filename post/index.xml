@@ -41,8 +41,80 @@ The following screencast illustrates this slightly hacky solution.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://pehei.de/img/thunderbird-taiga-integration/token-screencast.gif&#34; alt=&#34;Obtain User Token&#34; /&gt;&lt;/p&gt;
 
+&lt;h2 id=&#34;appendix&#34;&gt;Appendix&lt;/h2&gt;
+
+&lt;h3 id=&#34;contribution&#34;&gt;Contribution&lt;/h3&gt;
+
 &lt;p&gt;Feel free to comment and give some feedback. For all the technical stuff, bug reports, pull requests, etc., please go to the
 &lt;a href=&#34;https://github.com/phdd/thunderbird-taiga-integration&#34; target=&#34;_blank&#34;&gt;GitHub repository&lt;/a&gt; and &lt;strong&gt;contribute&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Feature&lt;/th&gt;
+&lt;th&gt;Version&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Dev. State&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Message to Markdown&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;1.0&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;🌕&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Watchers from E-mail&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;1.0&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;🌕&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Upload attachments&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;1.0&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;🌕&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;German Translation&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;1.0&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;🌕&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Wizard: create Issue&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;1.0&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;🌕&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Wizard: create User-Story&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;2.0&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;🌓&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Wizard: create Task&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;3.0&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;🌓&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Wizard: Comment&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;4.0&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;🌓&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Wizard: Upload Attachments&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;5.0&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;🌓&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
