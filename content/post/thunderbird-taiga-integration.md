@@ -1,6 +1,6 @@
 +++
 date = 2018-03-06
-lastmod = 2018-03-06
+lastmod = 2018-03-07
 draft = false
 tags = ["software", "thunderbird", "taiga"]
 title = "Thunderbird Taiga Integration"
@@ -15,7 +15,7 @@ caption = "Image credit: [**Taiga.io**](https://tree.taiga.io/)"
 
 +++
 
-As described in the _Getting Things Done_ methodology we have to cope with a large amount of incoming information; E-mails are outdated, but still heavily used. They are trapped in our client software, only transferable by copy and paste. Thus we need a way to import those into our favorite project management system to actually get things done. Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose. 
+As described by the _Getting Things Done_ methodology we have to cope with a large amount of incoming information; especially E-mails are outdated, but still heavily used. They are trapped in our client software, only transferable by copy and paste the relevant content. Hence we need a way to import those into our favorite project management system to actually get things done. Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose. 
 
 It converts Thunderbirds mails to user stories, tasks and tickets for the [Taiga project management system](https://taiga.io).
 You can get the plugin at [thunderbird's addon repository](https://addons.mozilla.org/de/thunderbird/addon/thunderbird-taiga-integration/).
