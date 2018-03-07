@@ -3,7 +3,7 @@
 git config --global user.name "Travis CI"
 git config --global user.email "joe@travis-ci.org"
 
-git clone "https://${GH_TOKEN}@${GH_REF}" master
+git clone --recurse-submodules "https://${GH_TOKEN}@${GH_REF}" master
 
 cd master
 git checkout master

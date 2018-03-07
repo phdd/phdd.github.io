@@ -1,6 +1,6 @@
 +++
 date = 2018-03-06
-lastmod = 2018-03-07
+lastmod = 2018-03-06
 draft = false
 tags = ["software", "thunderbird", "taiga"]
 title = "Thunderbird Taiga Integration"
@@ -11,20 +11,25 @@ Convert Thunderbirds mails to user stories, tasks and tickets for the Taiga proj
 
 [[gallery_item]]
 album = "1"
-image = "thunderbird-taiga-intergation/ticket.png"
+image = "thunderbird-taiga-integration/ticket.png"
 caption = "Create Taiga Ticket"
     
 [[gallery_item]]
 album = "1"
-image = "thunderbird-taiga-intergation/settings.png"
+image = "thunderbird-taiga-integration/settings.png"
 caption = "Setup your Taiga instance"
+
+[[gallery_item]]
+album = "1"
+image = "thunderbird-taiga-integration/token-screencast.gif"
+caption = "Obtain authentication token"
 
 [header]
 image = "thunderbird-taiga-integration/bg.png"
 caption = "Background Image: [**Taiga.io**](https://tree.taiga.io/)"
 +++
 
-As described by the _Getting Things Done_ methodology we have to cope with a large amount of incoming information; especially E-mails are outdated, but still heavily used. They are trapped in our client software, only transferable by copy and paste the relevant content. Hence we need a way to import those into our favorite project management system to actually get things done. Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose. 
+As described in the _Getting Things Done_ methodology we have to cope with a large amount of incoming information; E-mails are outdated, but still heavily used. They are trapped in our client software, only transferable by copy and paste. Thus we need a way to import those into our favorite project management system to actually get things done. Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose. 
 
 It converts Thunderbirds mails to user stories, tasks and tickets for the [Taiga project management system](https://taiga.io).
 You can get the plugin at [thunderbird's addon repository](https://addons.mozilla.org/de/thunderbird/addon/thunderbird-taiga-integration/).
@@ -54,14 +59,18 @@ The following screencast illustrates this slightly hacky solution.
 Feel free to comment and give some feedback. For all the technical stuff, bug reports, pull requests, etc., please go to the 
 [GitHub repository](https://github.com/phdd/thunderbird-taiga-integration) and **contribute**. 
 
+### Screenshots
+
+{{< gallery album="1" >}}
+
 ### Features
 
-| Feature                    | Version | Dev. State           |
+| &nbsp;                     | Version | Dev. State           |
 |----------------------------|---------|:---------------------|
 | Message to Markdown        | _1.0_   | :full_moon:          |
 | Watchers from E-mail       | _1.0_   | :full_moon:          |
 | Upload attachments         | _1.0_   | :full_moon:          |
-| German Translation        | _1.0_   | :full_moon:          |
+| German Translation         | _1.0_   | :full_moon:          |
 | Wizard: create Issue       | _1.0_   | :full_moon:          |
 | Wizard: create User-Story  | _2.0_   | :first_quarter_moon: |
 | Wizard: create Task        | _3.0_   | :first_quarter_moon: |
