@@ -18,23 +18,28 @@
       <guid>https://pehei.de/post/thunderbird-taiga-integration/</guid>
       <description>
 
-&lt;p&gt;As described in the &lt;em&gt;Getting Things Done&lt;/em&gt; methodology we have to cope with a large amount of incoming information; E-mails are outdated, but still heavily used. They are trapped in our client software, only transferable by copy and paste. Thus we need a way to import those into our favorite project management system to actually get things done. Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose.&lt;/p&gt;
+&lt;p&gt;As described in the &lt;em&gt;Getting Things Done&lt;/em&gt; methodology we have to cope with a large amount of incoming information; E-mails are outdated, but still heavily used.
+They are trapped in our client software, only transferable by copy and paste.
+Thus we need a way to import those into our favorite project management system to actually get things done.&lt;/p&gt;
 
-&lt;p&gt;It converts Thunderbirds mails to user stories, tasks and tickets for the &lt;a href=&#34;https://taiga.io&#34; target=&#34;_blank&#34;&gt;Taiga project management system&lt;/a&gt;.
+&lt;p&gt;Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose.
+It converts Thunderbirds mails to user stories, tasks and tickets for the &lt;a href=&#34;https://taiga.io&#34; target=&#34;_blank&#34;&gt;Taiga project management system&lt;/a&gt;.
 You can get the plugin at &lt;a href=&#34;https://addons.mozilla.org/de/thunderbird/addon/thunderbird-taiga-integration/&#34; target=&#34;_blank&#34;&gt;thunderbird&amp;rsquo;s addon repository&lt;/a&gt;.
 And if you like to contribute go to my the &lt;a href=&#34;https://github.com/phdd/thunderbird-taiga-integration&#34; target=&#34;_blank&#34;&gt;GitHub repository&lt;/a&gt;.
-Those sources are licensed under the &lt;a href=&#34;http://mozilla.org/MPL/2.0/&#34; target=&#34;_blank&#34;&gt;Mozilla Public
-License, v. 2.0&lt;/a&gt;.&lt;/p&gt;
+Those sources are licensed under the &lt;a href=&#34;http://mozilla.org/MPL/2.0/&#34; target=&#34;_blank&#34;&gt;Mozilla Public License, v. 2.0&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Please keep in mind, that this is an early version missing some of the aforementioned features. When I get the time, it&amp;rsquo;ll move forward. Another way is community contribution, obviously.&lt;/p&gt;
+&lt;p&gt;Please keep in mind, that this is an early version missing some of the aforementioned features.
+When I get the time, it&amp;rsquo;ll move forward. Another way is community contribution, obviously.&lt;/p&gt;
 
 &lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 
-&lt;p&gt;There are two ways to this addon. Right click on an E-mail and choose &lt;code&gt;Taiga&lt;/code&gt; or select one and do likewise through &lt;code&gt;Message &amp;gt; Taiga&lt;/code&gt;. If any of the menu seems disabled, there might be something wrong with the addon&amp;rsquo;s settings.&lt;/p&gt;
+&lt;p&gt;There are two ways to this addon. Right click on an E-mail and choose &lt;code&gt;Taiga&lt;/code&gt; or select one and do likewise through &lt;code&gt;Message &amp;gt; Taiga&lt;/code&gt;.
+If any of the menu seems disabled, there might be something wrong with the addon&amp;rsquo;s settings.&lt;/p&gt;
 
 &lt;h3 id=&#34;authentication&#34;&gt;Authentication&lt;/h3&gt;
 
-&lt;p&gt;The user authenticates with a token against any Taiga-instance. There&amp;rsquo;s an application token, especially for this addon&amp;rsquo;s use-case, and a user token authenticating the user himself.
+&lt;p&gt;The user authenticates with a token against any Taiga-instance.
+There&amp;rsquo;s an application token, especially for this addon&amp;rsquo;s use-case, and a user token authenticating the user himself.
 Since Taiga&amp;rsquo;s application token flow is rather unusable, authentication is done via the user&amp;rsquo;s bearer-token.
 To obtain this token, log in to your Taiga, open the developer console and get it from the application&amp;rsquo;s local storage.
 The following screencast illustrates this slightly hacky solution.&lt;/p&gt;
