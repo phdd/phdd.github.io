@@ -1,6 +1,6 @@
 +++
 date = 2018-03-06
-lastmod = 2018-03-06
+lastmod = 2018-03-07
 draft = false
 tags = ["software", "thunderbird", "taiga"]
 title = "Thunderbird Taiga Integration"
@@ -18,11 +18,6 @@ caption = "Create Taiga Ticket"
 album = "1"
 image = "thunderbird-taiga-integration/settings.png"
 caption = "Setup your Taiga instance"
-
-[[gallery_item]]
-album = "1"
-image = "thunderbird-taiga-integration/token-screencast.gif"
-caption = "Obtain authentication token"
 
 [header]
 image = "thunderbird-taiga-integration/bg.png"
