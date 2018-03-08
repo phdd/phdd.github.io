@@ -15,6 +15,11 @@
     <meta itemprop="image" content="{{ printf "/img/%s" $.Site.Params.avatar | absURL }}">
     {{ with $.Site.Params.role }}<meta itemprop="jobTitle" content="{{ . }}" />{{ end }}
   </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="{{ $.Site.Params.name }}">
+    <meta itemprop="image" content="{{ printf "/img/%s" $.Site.Params.avatar | absURL }}">
+    {{ with $.Site.Params.role }}<meta itemprop="jobTitle" content="{{ . }}" />{{ end }}
+  </span>
 
   {{ if ne $.Site.Params.reading_time false }}
   <span class="middot-divider"></span>
