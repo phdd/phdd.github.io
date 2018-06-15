@@ -6,6 +6,7 @@ image = ""
 image_preview = ""
 math = true
 publication_types = ["6"]
+schema_type = "Article"
 publication = "In *Enterprise, Business-Process and Information Systems Modeling (BPMDS 2016)*, Lecture Notes in Business Information Processing, vol 248. Springer, Cham"
 selected = true
 title = "Enabling Self-adaptive Workflows for Cyber-physical Systems"

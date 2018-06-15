@@ -1,0 +1,28 @@
+<div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/{{ .Params.schema_type }}">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <span>
+    {{ with .Params.authors }}
+      {{- delimit . ", " | markdownify -}}
+    {{- end -}}
+  </span>.
+
+  {{ range .Params.authors }}
+    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="{{ . }}" />
+    </span>
+  {{ end }}
+
+  <meta itemprop="headline" content="{{ .Title }}" />
+  <meta itemprop="datePublished dateModified" content="{{ .Date }}" />
+  <meta itemprop="mainEntityOfPage" content="{{ .Params.url_pdf }}" />
+  <meta itemprop="image" content="{{ print "/img/icon-document.png" | absURL }}" />
+  
+  <a href="{{ .Permalink }}">{{ .Title }}</a>.
+  {{ if .Params.publication_short }}
+    {{- .Params.publication_short | markdownify -}},
+  {{ else if .Params.publication }}
+    {{- .Params.publication | markdownify -}},
+  {{ end }}
+  {{- .Date.Format "2006" -}}.
+  <p>{{ partial "publication_links" (dict "content" . "is_list" 1) }}</p>
+</div>

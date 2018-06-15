@@ -6,6 +6,7 @@ image = ""
 image_preview = ""
 math = true
 publication_types = ["1"]
+schema_type = "Article"
 publication = "In *Proceedings of the 18th International Conference on Human-Computer Interaction with Mobile Devices and Services Adjunct (MobileHCI 2016)*, ACM New York, NY, USA"
 selected = true
 title = "Natural Collocated Interactions for Merging Results with Mobile Devices"

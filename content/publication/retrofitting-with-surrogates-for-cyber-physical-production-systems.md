@@ -6,6 +6,7 @@ image = ""
 image_preview = ""
 math = true
 publication_types = ["3"]
+schema_type = "Article"
 selected = false
 draft = true
 title = "Retrofitting with Surrogates for Cyber-Physical Production Systems"

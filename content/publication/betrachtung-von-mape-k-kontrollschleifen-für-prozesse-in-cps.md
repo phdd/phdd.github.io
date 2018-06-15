@@ -6,6 +6,7 @@ image = ""
 image_preview = ""
 math = true
 publication_types = ["8"]
+schema_type = "Thesis"
 publication = "Online"
 publication_short = ""
 description = "Minor Thesis (B.Sc.)"

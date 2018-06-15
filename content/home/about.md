@@ -33,7 +33,7 @@ weight = 5
 
 # Biography
 
-
+<span itemprop="description">
 Peter Heisig is a research associate of the software technology group at Technische Universität Dresden. His research interests include software architectures for self-adaptive distributed systems, cyber-physical systems and the internet of things.
-
+</span>
 Modern web technologies, self-contained systems, programming languages, model-driven design and test-driven development are his major fields of interest. He is passionate about open-source software and contributed to several projects. Spring framework and Node.js prototypes are the chosen ones for his concept's proofs.

@@ -15,6 +15,7 @@ authors = ["Ronny Seiger", "Steffen Huber", "Peter Heisig", "Uwe Assmann"]
 # 5 = Book
 # 6 = Book chapter
 publication_types = ["2"]
+schema_type = "Article"
 
 # Publication name and optional abbreviated version.
 publication = "In *Software & Systems Modeling*, pp 1-18"
@@ -47,7 +48,7 @@ url_source = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [{name = "DOI", url = "https://doi.org/10.13140/RG.2.2.35828.96645"}]
+url_custom = [{name = "DOI", url = "https://doi.org/10.1007/s10270-017-0639-0"}]
 
 # Does the content use math formatting?
 math = true

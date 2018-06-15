@@ -6,6 +6,7 @@ image = ""
 image_preview = ""
 math = true
 publication_types = ["7"]
+schema_type = "Article"
 publication = "In *Proceedings of the 9th Central European Workshop on Services and their Composition (ZEUS 2017)*, Lugano, Switzerland"
 selected = true
 title = "PROtEUS++: A Self-managed IoT Workflow Engine with Dynamic Service Discovery"
