@@ -47,7 +47,7 @@ Working with Taiga and Thunderbird for quite a while now, I managed to write a t
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
   
@@ -65,6 +65,7 @@ Working with Taiga and Thunderbird for quite a while now, I managed to write a t
     <script>
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
       ga('create', 'UA-3690899-5', 'auto');
+      ga('set', 'anonymizeIp', true);
       ga('require', 'eventTracker');
       ga('require', 'outboundLinkTracker');
       ga('require', 'urlChangeTracker');
@@ -105,6 +106,32 @@ Working with Taiga and Thunderbird for quite a while now, I managed to write a t
   
   <meta property="article:modified_time" content="2018-03-07T00:00:00&#43;00:00">
   
+
+  
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#0095eb",
+          "text": "#fff"
+        },
+        "button": {
+          "background": "#fff",
+          "text": "#0095eb"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Got it!",
+        "link": "Learn more"
+      }
+    })});
+</script>
 
   
 
@@ -227,7 +254,11 @@ Working with Taiga and Thunderbird for quite a while now, I managed to write a t
 
   
 <div class="article-header">
-  <img src="/img/thunderbird-taiga-integration/bg.png" class="article-banner" itemprop="image">
+  
+  
+    <img src="/img/thunderbird-taiga-integration/bg.png" class="article-banner" itemprop="image">
+  
+
   <span class="article-header-caption">Background Image: <a href="https://tree.taiga.io/" target="_blank"><strong>Taiga.io</strong></a></span>
 </div>
 
@@ -459,11 +490,11 @@ The following screencast illustrates this slightly hacky solution.</p>
 
 <div class="article-tags">
   
-  <a class="btn btn-primary btn-outline" href="/tags/software">software</a>
+  <a class="btn btn-primary btn-outline" href="https://pehei.de/tags/software/">software</a>
   
-  <a class="btn btn-primary btn-outline" href="/tags/thunderbird">thunderbird</a>
+  <a class="btn btn-primary btn-outline" href="https://pehei.de/tags/thunderbird/">thunderbird</a>
   
-  <a class="btn btn-primary btn-outline" href="/tags/taiga">taiga</a>
+  <a class="btn btn-primary btn-outline" href="https://pehei.de/tags/taiga/">taiga</a>
   
 </div>
 
