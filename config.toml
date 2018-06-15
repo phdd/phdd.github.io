@@ -141,6 +141,11 @@ defaultContentLanguageInSubdir = false
   # Enable native social sharing buttons?
   sharing = true
 
+  # Privacy pack
+  #   Show a cookie consent message to visitors
+  #   Anonymize IP in Google Analytics (if enabled)
+  privacy_pack = true
+
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
   custom_css = [ 'custom.css' ]#[ 'print.css', 'custom.css' ]
