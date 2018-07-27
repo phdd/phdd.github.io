@@ -15,9 +15,19 @@
   .fa-chevron-up,
   .contact-icon,
   .portrait-social li,
-  .powered-by,
+  .article-tags,
+  .article-widget,
+  .hugo-powered,
+  .disqus-stuff, 
+  #comments,
+  .footnote-return sup,
   .share-box {
     display: none !important;
+  }
+  
+  #top,
+  .article-header {
+    margin-top: 0px !important;
   }
 
   .home-section {
@@ -34,5 +44,15 @@
   .portrait-title h2 { font-size: 2.5em!important; }
   .portrait-title h3 { font-size: 1.5em!important; }
   .section-heading h1 { font-size: 1.5em!important; }
+
+  blockquote {
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+  }
+  
+  a[href]:after {
+      content: none !important;
+  }
 
 }
