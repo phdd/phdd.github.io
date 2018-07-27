@@ -50,5 +50,9 @@
     border-top: none;
     border-bottom: none;
   }
+  
+  a[href]:after {
+      content: none !important;
+  }
 
 }
