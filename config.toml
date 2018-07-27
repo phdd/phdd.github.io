@@ -1,6 +1,6 @@
 baseurl = "https://pehei.de/"  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 title = "Peter Heisig"
-copyright = "&copy; 2017 Peter Heisig"
+copyright = "&copy; 2017-2018 Peter Heisig"
 theme = "academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
@@ -148,7 +148,7 @@ defaultContentLanguageInSubdir = false
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = [ 'custom.css' ]#[ 'print.css', 'custom.css' ]
+  custom_css = [ 'custom.css', 'print.css' ]#[ 'print.css', 'custom.css' ]
   custom_js  = [ 'init.js', 'hyphenation.js' ]
 
   # Publication types.

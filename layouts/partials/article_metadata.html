@@ -2,6 +2,14 @@
 {{ $ := .content }}
 <div class="article-metadata">
 
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="{{ $.Site.Params.name }}">
+    <meta itemprop="image" content="{{ printf "/img/%s" $.Site.Params.avatar | absURL }}">
+    {{ with $.Site.Params.role }}<meta itemprop="jobTitle" content="{{ . }}" />{{ end }}
+    {{ $.Site.Params.name }}
+  </span>
+  <span class="middot-divider"></span>
+
   <span class="article-date">
     {{ if ne $.Params.Lastmod $.Params.Date }}
         {{ i18n "last_updated" }}
@@ -9,11 +17,6 @@
     <time datetime="{{ $.Date }}" itemprop="datePublished dateModified">
       {{ $.Lastmod.Format $.Site.Params.date_format }}
     </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="{{ $.Site.Params.name }}">
-    <meta itemprop="image" content="{{ printf "/img/%s" $.Site.Params.avatar | absURL }}">
-    {{ with $.Site.Params.role }}<meta itemprop="jobTitle" content="{{ . }}" />{{ end }}
   </span>
 
   {{ if ne $.Site.Params.reading_time false }}
@@ -25,8 +28,8 @@
 
   {{ $comments_enabled := and $.Site.DisqusShortname (not (or $.Site.Params.disable_comments $.Params.disable_comments)) }}
   {{ if and $comments_enabled ($.Site.Params.comment_count | default true) }}
-  <span class="middot-divider"></span>
-  <a href="{{ $.Permalink }}#disqus_thread"><!-- Count will be inserted here --></a>
+  <span class="middot-divider disqus-stuff"></span>
+  <a href="{{ $.Permalink }}#disqus_thread" class="disqus-stuff"><!-- Count will be inserted here --></a>
   {{ end}}
 
   {{ if isset $.Params "categories" }}

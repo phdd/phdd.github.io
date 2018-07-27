@@ -33,3 +33,14 @@ li.publication {
 p {
   text-align: justify;
 }
+
+blockquote footer {
+  margin: 0;
+  padding: 0;
+}
+
+.footnotes hr {
+  margin: 20px 0px !important;
+  background: #d6d6d6 !important;
+  background-image: none !important;
+}
