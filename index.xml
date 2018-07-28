@@ -11,6 +11,144 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Neo4j Graph View Editor</title>
+      <link>https://pehei.de/post/neo4j-editor/</link>
+      <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://pehei.de/post/neo4j-editor/</guid>
+      <description>&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
+
+&lt;p&gt;The Neo4j&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:neo4j&#34;&gt;&lt;a class=&#34;footnote&#34; href=&#34;#fn:neo4j&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; Browser&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:neo4j-browser&#34;&gt;&lt;a class=&#34;footnote&#34; href=&#34;#fn:neo4j-browser&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; is a great tool for querying a graph and comes with a well designed user interface that supports data visualization and iterative exploration.
+But in terms of manipulation, the user has to write Cypher&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:cypher&#34;&gt;&lt;a class=&#34;footnote&#34; href=&#34;#fn:cypher&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;-queries, respectively knowing the language in detail.
+I forked the GitHub-Project&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:neo4j-editor-github&#34;&gt;&lt;a class=&#34;footnote&#34; href=&#34;#fn:neo4j-editor-github&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; and extended the user interface for the sake of visual data manipulation.
+This allow rapid model prototyping and evolution without querying the graph with Cypher.
+A drawback is the inconsistency between multiple visualizations because of a missing synchonization mechanism.
+Assuming a running Neo4j instance, run the Docker container&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:run-docker-container&#34;&gt;&lt;a class=&#34;footnote&#34; href=&#34;#fn:run-docker-container&#34;&gt;5&lt;/a&gt;&lt;/sup&gt; and give it a try.&lt;/p&gt;
+
+&lt;h2 id=&#34;its-a-graph&#34;&gt;It&#39;s a Graph!&lt;/h2&gt;
+
+&lt;p&gt;A colleague and I were discussing the problem space of &lt;em&gt;Digital Health&lt;/em&gt; and it&#39;s embedding in information science.
+We designed a multi-dimensional euclidean model addressing the people&#39;s roles on one axis, their general health state on the other, treatment on the next, etc.
+Our goal was to provide a framework for the definition of any research project&#39;s location within the domain -- the project landscape.
+A few month later we met a medical doctor from whom we gained great insight into the real, non-academic version of the problem space we thought we&#39;d already understand.
+Long story short. It is rather a graph than a multi-dimensional euclidean space.
+So we took a tool called Neo4j and it&#39;s pretty neat browser to model such a graph.
+While prototyping, we noticed that it&#39;s not feasible to write Cypher-queries for every small property change or node connection addition and deletion.
+In general we wanted a user interface which allows rapid prototyping and easy model evolution.&lt;/p&gt;
+
+&lt;h2 id=&#34;hacking-a-browser&#34;&gt;Hacking a Browser&lt;/h2&gt;
+
+&lt;p&gt;Neo4j allows us to contribute and improve the software by its very own open source nature.
+I checked out the source and found a complex looking React&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:react&#34;&gt;&lt;a class=&#34;footnote&#34; href=&#34;#fn:react&#34;&gt;6&lt;/a&gt;&lt;/sup&gt; Javascript application.
+You can argue as much as you want; I don&#39;t think markup, stylesheets and business logic should go into one file.
+Don&#39;t get me the wrong way, as a software engineer, I love the idea of &amp;quot;everything is a component&amp;quot;.
+But why should I forsake a well established, thousand-times-proven software engineering approach and melt down those carefully separated aspects into one single file?
+Maybe it&#39;s part of the modern Javascript movement where it&#39;s desirable to get as much dependencies to proprietary transpilers and outdated software libraries as you can.
+Anyway, I&#39;m getting a little off-topic here. 😉&lt;/p&gt;
+
+&lt;p&gt;If you execute a Cypher query with the browser, you&#39;ll get a visualization frame.
+There&#39;s a bar on top of the visualization itself, giving you all the labels and relationship types that have been found and their cardinality.
+Below the visualization is the inspector.
+When selecting a node, it&#39;s labels and properties are shown.
+Select a relationship and you&#39;ll see it&#39;s type and properties.&lt;/p&gt;
+
+&lt;figure&gt;
+
+&lt;img src=&#34;https://pehei.de/img/neo4j-editor/toolbar.png&#34; alt=&#34;Introduced toolbar and additional inspector buttons&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  &lt;p&gt;
+    Introduced toolbar and additional inspector buttons
+    
+    
+    
+  &lt;/p&gt; 
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;manipulating-nodes--relationships&#34;&gt;Manipulating Nodes &amp;amp; Relationships&lt;/h3&gt;
+
+&lt;p&gt;As you can see in the image above, I added a tree button toolbar to the bottom left, right above the inspector.
+They&#39;re all working depending on the context, i.e. the selection you&#39;ve taken within the visualization.
+The first one deletes either a node or a relationship, depending on what&#39;s currently selected.
+Depicted as a closed chain, the second one will lead into a relationship creation mode.
+For this to work, you should select a node, go into the aforementioned mode and click the target of the new connection.
+The last one works when nothing&#39;s selected and creates a new node.&lt;br&gt;
+New nodes will have a label named &lt;code&gt;Unlabeled&lt;/code&gt; and new relationships will be &lt;code&gt;untyped&lt;/code&gt;.
+But don&#39;t worry, you&#39;ll have the option to refine both.
+I decided to assign a default label and type to identify unrefined nodes and relationships for keeping the model clean and concise.
+You may query your model for those, thus checking it&#39;s integrity.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cypher&#34;&gt;MATCH (a:Unlabeled)
+MATCH (b)-[:untyped]-(c)
+RETURN a, b, c;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;labels--types&#34;&gt;Labels &amp;amp; Types&lt;/h3&gt;
+
+&lt;p&gt;If you create a node or a relationship, there&#39;ll be a default label or type.
+You should alter those to match the domain you&#39;re modeling.
+When you click on a node&#39;s label, it will be deleted.
+Clicking on the plus sign right behind the labels section within the inspector, you&#39;ll get a dialog asking for a new label.
+Nearly the same interaction holds for relationship types.
+But in contrast to node labels, a relationship has exactly one type and can therefore not be deleted.&lt;/p&gt;
+
+&lt;h3 id=&#34;properties&#34;&gt;Properties&lt;/h3&gt;
+
+&lt;p&gt;A click on a property&#39;s name will will delete the property.
+If you intent to change a property, just click on it&#39;s value.
+New properties can be created with the plus button behind the list of existing ones.
+The last two actions will open a dialog with key and value text input.&lt;/p&gt;
+
+&lt;h2 id=&#34;alternatives&#34;&gt;Alternatives&lt;/h2&gt;
+
+&lt;p&gt;All the implementation work may seem redundant when you search for Neo4j graph editing tools.
+Just go to the Neo4j data visualization guide&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:neo4j-vis-guide&#34;&gt;&lt;a class=&#34;footnote&#34; href=&#34;#fn:neo4j-vis-guide&#34;&gt;7&lt;/a&gt;&lt;/sup&gt; and check some of them out.
+They all seem appropriate, but have at least one of the following drawbacks.
+Either you write most of the user interface and it&#39;s connection to the database yourself, or you pay a company to get a proprietary product.
+One open source project currently in development may replace the Neo4j browser in the future or give us graph editing functionality at least&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:neo4j-js&#34;&gt;&lt;a class=&#34;footnote&#34; href=&#34;#fn:neo4j-js&#34;&gt;8&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;The originality given by this implementation lies in it&#39;s open source character extending work that has already been done pretty well by the guys that build this graph database and browser.
+A problem is the missing synchronization mechanism for multiple visualization frames, but for my projects, this isn&#39;t an issue.&lt;/p&gt;
+
+&lt;h2 id=&#34;and-now&#34;&gt;And now?&lt;/h2&gt;
+
+&lt;p&gt;Go run the Docker container&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:run-docker-container&#34;&gt;&lt;a class=&#34;footnote&#34; href=&#34;#fn:run-docker-container&#34;&gt;9&lt;/a&gt;&lt;/sup&gt; and try my editor.
+You can contribute to this project at GitHub&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:neo4j-editor-github&#34;&gt;&lt;a class=&#34;footnote&#34; href=&#34;#fn:neo4j-editor-github&#34;&gt;10&lt;/a&gt;&lt;/sup&gt; as well.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:neo4j&#34;&gt;Neo4j graph platform, &lt;a href=&#34;https://neo4j.com&#34;&gt;neo4j.com&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:neo4j&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:neo4j-browser&#34;&gt;Neo4j browser, &lt;a href=&#34;https://neo4j.com/developer/guide-neo4j-browser/&#34;&gt;neo4j.com/developer/guide-neo4j-browser&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:neo4j-browser&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:cypher&#34;&gt;Cypher query language, &lt;a href=&#34;https://neo4j.com/developer/cypher/&#34;&gt;neo4j.com/developer/cypher&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:cypher&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:neo4j-editor-github&#34;&gt;Forked GitHub-Project of the Neo4j browser &lt;a href=&#34;https://github.com/phdd/neo4j-browser&#34;&gt;github.com/phdd/neo4j-browser&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:neo4j-editor-github&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:run-docker-container&#34;&gt;&lt;code&gt;docker run --name neo4j-editor -d -p 8080:80 phdd/neo4j-browser&lt;/code&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:run-docker-container&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:react&#34;&gt;React Javascript framework, &lt;a href=&#34;https://reactjs.org/&#34;&gt;reactjs.org&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:react&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:neo4j-vis-guide&#34;&gt;Neo4j data visualization guide, &lt;a href=&#34;https://neo4j.com/developer/guide-data-visualization/&#34;&gt;neo4j.com/developer/guide-data-visualization&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:neo4j-vis-guide&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:neo4j-js&#34;&gt;A Neo4j graph editor written in Javascript, &lt;a href=&#34;https://github.com/adadgio/neo4j-js&#34;&gt;github.com/adadgio/neo4j-js&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:neo4j-js&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:run-docker-container&#34;&gt;&lt;code&gt;docker run --name neo4j-editor -d -p 8080:80 phdd/neo4j-browser&lt;/code&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:run-docker-container&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:neo4j-editor-github&#34;&gt;Forked GitHub-Project of the Neo4j browser &lt;a href=&#34;https://github.com/phdd/neo4j-browser&#34;&gt;github.com/phdd/neo4j-browser&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:neo4j-editor-github&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Thunderbird Taiga Integration</title>
       <link>https://pehei.de/post/thunderbird-taiga-integration/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>

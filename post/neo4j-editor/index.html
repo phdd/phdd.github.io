@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.30.2" />
+  <meta name="author" content="Peter Heisig">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="TL;DR The Neo4j1 Browser2 is a great tool for querying a graph and comes with a well designed user interface that supports data visualization and iterative exploration. But in terms of manipulation, the user has to write Cypher3-queries, respectively knowing the language in detail. I forked the GitHub-Project4 and extended the user interface for the sake of visual data manipulation. This allow rapid model prototyping and evolution without querying the graph with Cypher.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://pehei.de/post/neo4j-editor/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#0095eb">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom.css">
+  
+  <link rel="stylesheet" href="/css/print.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-3690899-5', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+  <link rel="alternate" href="https://pehei.de/index.xml" type="application/rss+xml" title="Peter Heisig">
+  <link rel="feed" href="https://pehei.de/index.xml" type="application/rss+xml" title="Peter Heisig">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://pehei.de/post/neo4j-editor/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@https://twitter.com/_phdd">
+  <meta property="twitter:creator" content="@https://twitter.com/_phdd">
+  
+  <meta property="og:site_name" content="Peter Heisig">
+  <meta property="og:url" content="https://pehei.de/post/neo4j-editor/">
+  <meta property="og:title" content="Neo4j Graph View Editor">
+  <meta property="og:description" content="TL;DR The Neo4j1 Browser2 is a great tool for querying a graph and comes with a well designed user interface that supports data visualization and iterative exploration. But in terms of manipulation, the user has to write Cypher3-queries, respectively knowing the language in detail. I forked the GitHub-Project4 and extended the user interface for the sake of visual data manipulation. This allow rapid model prototyping and evolution without querying the graph with Cypher.">
+  <meta property="og:image" content="https://pehei.de/img/neo4j-editor/bg.png">
+  
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-07-27T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-07-27T00:00:00&#43;00:00">
+  
+
+  
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#0095eb",
+          "text": "#fff"
+        },
+        "button": {
+          "background": "#fff",
+          "text": "#0095eb"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Got it!",
+        "link": "Learn more"
+      }
+    })});
+</script>
+
+  
+
+  <title>Neo4j Graph View Editor</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Peter Heisig</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>About</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  
+  
+    <img src="/img/neo4j-editor/bg.png" class="article-banner" itemprop="image">
+  
+
+  
+</div>
+
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Neo4j Graph View Editor</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Peter Heisig">
+    <meta itemprop="image" content="https://pehei.de/img/portrait.jpg">
+    <meta itemprop="jobTitle" content="Research Associate" />
+    Peter Heisig
+  </span>
+  <span class="middot-divider"></span>
+
+  <span class="article-date">
+    
+    <time datetime="2018-07-27 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Jul 27, 2018
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider disqus-stuff"></span>
+  <a href="https://pehei.de/post/neo4j-editor/#disqus_thread" class="disqus-stuff"></a>
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Neo4j%20Graph%20View%20Editor&amp;url=https%3a%2f%2fpehei.de%2fpost%2fneo4j-editor%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fpehei.de%2fpost%2fneo4j-editor%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fpehei.de%2fpost%2fneo4j-editor%2f&amp;title=Neo4j%20Graph%20View%20Editor"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fpehei.de%2fpost%2fneo4j-editor%2f&amp;title=Neo4j%20Graph%20View%20Editor"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Neo4j%20Graph%20View%20Editor&amp;body=https%3a%2f%2fpehei.de%2fpost%2fneo4j-editor%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      <h2 id="tldr">TL;DR</h2>
+
+<p>The Neo4j<sup class="footnote-ref" id="fnref:neo4j"><a class="footnote" href="#fn:neo4j">1</a></sup> Browser<sup class="footnote-ref" id="fnref:neo4j-browser"><a class="footnote" href="#fn:neo4j-browser">2</a></sup> is a great tool for querying a graph and comes with a well designed user interface that supports data visualization and iterative exploration.
+But in terms of manipulation, the user has to write Cypher<sup class="footnote-ref" id="fnref:cypher"><a class="footnote" href="#fn:cypher">3</a></sup>-queries, respectively knowing the language in detail.
+I forked the GitHub-Project<sup class="footnote-ref" id="fnref:neo4j-editor-github"><a class="footnote" href="#fn:neo4j-editor-github">4</a></sup> and extended the user interface for the sake of visual data manipulation.
+This allow rapid model prototyping and evolution without querying the graph with Cypher.
+A drawback is the inconsistency between multiple visualizations because of a missing synchonization mechanism.
+Assuming a running Neo4j instance, run the Docker container<sup class="footnote-ref" id="fnref:run-docker-container"><a class="footnote" href="#fn:run-docker-container">5</a></sup> and give it a try.</p>
+
+<h2 id="its-a-graph">It's a Graph!</h2>
+
+<p>A colleague and I were discussing the problem space of <em>Digital Health</em> and it's embedding in information science.
+We designed a multi-dimensional euclidean model addressing the people's roles on one axis, their general health state on the other, treatment on the next, etc.
+Our goal was to provide a framework for the definition of any research project's location within the domain -- the project landscape.
+A few month later we met a medical doctor from whom we gained great insight into the real, non-academic version of the problem space we thought we'd already understand.
+Long story short. It is rather a graph than a multi-dimensional euclidean space.
+So we took a tool called Neo4j and it's pretty neat browser to model such a graph.
+While prototyping, we noticed that it's not feasible to write Cypher-queries for every small property change or node connection addition and deletion.
+In general we wanted a user interface which allows rapid prototyping and easy model evolution.</p>
+
+<h2 id="hacking-a-browser">Hacking a Browser</h2>
+
+<p>Neo4j allows us to contribute and improve the software by its very own open source nature.
+I checked out the source and found a complex looking React<sup class="footnote-ref" id="fnref:react"><a class="footnote" href="#fn:react">6</a></sup> Javascript application.
+You can argue as much as you want; I don't think markup, stylesheets and business logic should go into one file.
+Don't get me the wrong way, as a software engineer, I love the idea of &quot;everything is a component&quot;.
+But why should I forsake a well established, thousand-times-proven software engineering approach and melt down those carefully separated aspects into one single file?
+Maybe it's part of the modern Javascript movement where it's desirable to get as much dependencies to proprietary transpilers and outdated software libraries as you can.
+Anyway, I'm getting a little off-topic here. 😉</p>
+
+<p>If you execute a Cypher query with the browser, you'll get a visualization frame.
+There's a bar on top of the visualization itself, giving you all the labels and relationship types that have been found and their cardinality.
+Below the visualization is the inspector.
+When selecting a node, it's labels and properties are shown.
+Select a relationship and you'll see it's type and properties.</p>
+
+<figure>
+
+<img src="/img/neo4j-editor/toolbar.png" alt="Introduced toolbar and additional inspector buttons" />
+
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  <p>
+    Introduced toolbar and additional inspector buttons
+    
+    
+    
+  </p> 
+</figcaption>
+
+</figure>
+
+<h3 id="manipulating-nodes--relationships">Manipulating Nodes &amp; Relationships</h3>
+
+<p>As you can see in the image above, I added a tree button toolbar to the bottom left, right above the inspector.
+They're all working depending on the context, i.e. the selection you've taken within the visualization.
+The first one deletes either a node or a relationship, depending on what's currently selected.
+Depicted as a closed chain, the second one will lead into a relationship creation mode.
+For this to work, you should select a node, go into the aforementioned mode and click the target of the new connection.
+The last one works when nothing's selected and creates a new node.<br>
+New nodes will have a label named <code>Unlabeled</code> and new relationships will be <code>untyped</code>.
+But don't worry, you'll have the option to refine both.
+I decided to assign a default label and type to identify unrefined nodes and relationships for keeping the model clean and concise.
+You may query your model for those, thus checking it's integrity.</p>
+
+<pre><code class="language-cypher">MATCH (a:Unlabeled)
+MATCH (b)-[:untyped]-(c)
+RETURN a, b, c;
+</code></pre>
+
+<h3 id="labels--types">Labels &amp; Types</h3>
+
+<p>If you create a node or a relationship, there'll be a default label or type.
+You should alter those to match the domain you're modeling.
+When you click on a node's label, it will be deleted.
+Clicking on the plus sign right behind the labels section within the inspector, you'll get a dialog asking for a new label.
+Nearly the same interaction holds for relationship types.
+But in contrast to node labels, a relationship has exactly one type and can therefore not be deleted.</p>
+
+<h3 id="properties">Properties</h3>
+
+<p>A click on a property's name will will delete the property.
+If you intent to change a property, just click on it's value.
+New properties can be created with the plus button behind the list of existing ones.
+The last two actions will open a dialog with key and value text input.</p>
+
+<h2 id="alternatives">Alternatives</h2>
+
+<p>All the implementation work may seem redundant when you search for Neo4j graph editing tools.
+Just go to the Neo4j data visualization guide<sup class="footnote-ref" id="fnref:neo4j-vis-guide"><a class="footnote" href="#fn:neo4j-vis-guide">7</a></sup> and check some of them out.
+They all seem appropriate, but have at least one of the following drawbacks.
+Either you write most of the user interface and it's connection to the database yourself, or you pay a company to get a proprietary product.
+One open source project currently in development may replace the Neo4j browser in the future or give us graph editing functionality at least<sup class="footnote-ref" id="fnref:neo4j-js"><a class="footnote" href="#fn:neo4j-js">8</a></sup>.</p>
+
+<p>The originality given by this implementation lies in it's open source character extending work that has already been done pretty well by the guys that build this graph database and browser.
+A problem is the missing synchronization mechanism for multiple visualization frames, but for my projects, this isn't an issue.</p>
+
+<h2 id="and-now">And now?</h2>
+
+<p>Go run the Docker container<sup class="footnote-ref" id="fnref:run-docker-container"><a class="footnote" href="#fn:run-docker-container">9</a></sup> and try my editor.
+You can contribute to this project at GitHub<sup class="footnote-ref" id="fnref:neo4j-editor-github"><a class="footnote" href="#fn:neo4j-editor-github">10</a></sup> as well.</p>
+<div class="footnotes">
+
+<hr>
+
+<ol>
+<li id="fn:neo4j">Neo4j graph platform, <a href="https://neo4j.com">neo4j.com</a>
+ <a class="footnote-return" href="#fnref:neo4j"><sup>^</sup></a></li>
+<li id="fn:neo4j-browser">Neo4j browser, <a href="https://neo4j.com/developer/guide-neo4j-browser/">neo4j.com/developer/guide-neo4j-browser</a>
+ <a class="footnote-return" href="#fnref:neo4j-browser"><sup>^</sup></a></li>
+<li id="fn:cypher">Cypher query language, <a href="https://neo4j.com/developer/cypher/">neo4j.com/developer/cypher</a>
+ <a class="footnote-return" href="#fnref:cypher"><sup>^</sup></a></li>
+<li id="fn:neo4j-editor-github">Forked GitHub-Project of the Neo4j browser <a href="https://github.com/phdd/neo4j-browser">github.com/phdd/neo4j-browser</a>
+ <a class="footnote-return" href="#fnref:neo4j-editor-github"><sup>^</sup></a></li>
+<li id="fn:run-docker-container"><code>docker run --name neo4j-editor -d -p 8080:80 phdd/neo4j-browser</code>
+ <a class="footnote-return" href="#fnref:run-docker-container"><sup>^</sup></a></li>
+<li id="fn:react">React Javascript framework, <a href="https://reactjs.org/">reactjs.org</a>
+ <a class="footnote-return" href="#fnref:react"><sup>^</sup></a></li>
+<li id="fn:neo4j-vis-guide">Neo4j data visualization guide, <a href="https://neo4j.com/developer/guide-data-visualization/">neo4j.com/developer/guide-data-visualization</a>
+ <a class="footnote-return" href="#fnref:neo4j-vis-guide"><sup>^</sup></a></li>
+<li id="fn:neo4j-js">A Neo4j graph editor written in Javascript, <a href="https://github.com/adadgio/neo4j-js">github.com/adadgio/neo4j-js</a>
+ <a class="footnote-return" href="#fnref:neo4j-js"><sup>^</sup></a></li>
+<li id="fn:run-docker-container"><code>docker run --name neo4j-editor -d -p 8080:80 phdd/neo4j-browser</code>
+ <a class="footnote-return" href="#fnref:run-docker-container"><sup>^</sup></a></li>
+<li id="fn:neo4j-editor-github">Forked GitHub-Project of the Neo4j browser <a href="https://github.com/phdd/neo4j-browser">github.com/phdd/neo4j-browser</a>
+ <a class="footnote-return" href="#fnref:neo4j-editor-github"><sup>^</sup></a></li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="https://pehei.de/tags/software/">software</a>
+  
+  <a class="btn btn-primary btn-outline" href="https://pehei.de/tags/neo4j/">neo4j</a>
+  
+  <a class="btn btn-primary btn-outline" href="https://pehei.de/tags/graph/">graph</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/post/thunderbird-taiga-integration/">Thunderbird Taiga Integration</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "pehei" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017-2018 Peter Heisig
+
+      <span class="hugo-powered">&middot; Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.</span>
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//pehei.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+    <script src="/js/init.js"></script>
+    
+    <script src="/js/hyphenation.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+
