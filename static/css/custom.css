@@ -7,10 +7,6 @@
     padding: 0 !important;
 }
 
-.universal-wrapper {
-    padding-top: 20px !important;
-}
-
 html {
   font-size: 13px!important;
 }
@@ -58,4 +54,8 @@ blockquote footer {
   box-shadow: 0 1px 4px rgba(0,0,0,.04);
   border: 1px solid rgba(0,0,0,.09);
   border-radius: 3px;
+}
+
+.universal-wrapper {
+    padding-top: 1px !important;
 }
