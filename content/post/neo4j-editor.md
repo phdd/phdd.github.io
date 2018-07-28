@@ -4,7 +4,7 @@ summary: "When being tired of writing Cypher queries for prototyping: A Neo4j br
 
 date: 2018-07-27
 lastmod: 2018-07-27
-draft: true
+draft: false
 
 tags:
   - software
@@ -91,13 +91,13 @@ But in contrast to node labels, a relationship has exactly one type and can ther
 A click on a property's name will will delete the property.
 If you intent to change a property, just click on it's value.
 New properties can be created with the plus button behind the list of existing ones.
-The last two actions will open a dialog with key and value text inputs.
+The last two actions will open a dialog with key and value text input.
 
 ## Alternatives
 
 All the implementation work may seem redundant when you search for Neo4j graph editing tools.
 Just go to the Neo4j data visualization guide[^neo4j-vis-guide] and check some of them out.
-They all seem feasible, but have at least one of the following drawbacks.
+They all seem appropriate, but have at least one of the following drawbacks.
 Either you write most of the user interface and it's connection to the database yourself, or you pay a company to get a proprietary product.
 One open source project currently in development may replace the Neo4j browser in the future or give us graph editing functionality at least[^neo4j-js].
 
