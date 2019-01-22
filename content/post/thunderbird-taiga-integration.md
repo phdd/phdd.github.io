@@ -1,6 +1,6 @@
 +++
 date = 2018-03-06
-lastmod = 2018-03-07
+lastmod = 2019-01-22
 draft = false
 tags = ["software", "thunderbird", "taiga"]
 title = "Thunderbird Taiga Integration"
