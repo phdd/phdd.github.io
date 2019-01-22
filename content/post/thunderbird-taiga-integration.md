@@ -24,6 +24,10 @@ image = "thunderbird-taiga-integration/bg.png"
 caption = "Background Image: [**Taiga.io**](https://tree.taiga.io/)"
 +++
 
+## Update
+
+Version 2.0 has been released. User-Stories and Application Tokens are now supported. Unfortunately I had to drop the config dialog, due to Thunderbird 60 migration issues. The relevant parameters shall be modified through the config editor (search for taiga). The Mozilla review procedure can take a while, but you can side-load it via [github.com/phdd/thunderbird-taiga-integration/releases/tag/v2.0](https://github.com/phdd/thunderbird-taiga-integration/releases/tag/v2.0).
+
 As described in the _Getting Things Done_ methodology we have to cope with a large amount of incoming information; E-mails are outdated, but still heavily used.
 They are trapped in our client software, only transferable by copy and paste.
 Thus we need a way to import those into our favorite project management system to actually get things done.
