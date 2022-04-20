@@ -1,0 +1,55 @@
+ErrorDocument 404 /404.html
+
+<If "%{REQUEST_URI} =~ /nl\x2F.*/">
+    ErrorDocument 404 /en/404.html
+</If>
+
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301]
+
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+
+    # Cache-control headers
+    # 2 HOURS
+    #<filesMatch "*">
+    #    Header set Cache-Control "max-age=7200, must-revalidate"
+    #</filesMatch>
+
+    # 480 weeks - 290304000
+    <filesMatch "\.(eot|svg|ttf|woff|woff2)\??$">
+      Header set Cache-Control "max-age=1209600, public"
+    </filesMatch>
+    
+    # 2 WEEKS
+    <filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|swf|svg)$">
+        Header set Cache-Control "max-age=1209600, public"
+    </filesMatch>
+
+    # 2 WEEKS
+    <filesMatch "\.(css)$">
+        Header set Cache-Control "max-age=1209600, public, must-revalidate"
+    </filesMatch>
+
+    # 2 DAYS
+    <filesMatch "\.(xml|txt)$">
+        Header set Cache-Control "max-age=172800, public, must-revalidate"
+    </filesMatch>
+
+    # 2 HOURS
+    <filesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=7200, must-revalidate"
+    </filesMatch>
+
+    <FilesMatch "\.(gif|jpg|png|ico|css|js|pdf|txt)$">
+        Header append Cache-Control "public"
+    </FilesMatch>
+</IfModule>

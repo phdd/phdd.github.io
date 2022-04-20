@@ -1,0 +1,48 @@
+# Translations for English
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# Generic
+#
+[translations]
+other = "Translations"
+
+[postAvailable]
+other = "Also available in"
+
+
+# 404.html
+#
+[archives]
+other = "Archives"
+
+[home]
+other = "Home"
+
+[notFound]
+other = "Oops, page not found…"
+
+
+# posts/single.html
+#
+[readingTime]
+one   = "One minute"
+other = "{{ .Count }} minutes"
+
+[tableOfContents]
+other = "Table of Contents"
+
+[wordCount]
+one   = "One Word"
+other = "{{ .Count }} Words"
+
+[cookieLearn]
+other = "Privacy Policy"
+
+[cookieMessage]
+other = "We use cookies to personalize content and analyze traffic to our site. You agree to our cookies if you continue to use our website."
+
+[cookieDismiss]
+other = "Got it!"
+
+[cookieUrl]
+other = "privacy-policy"

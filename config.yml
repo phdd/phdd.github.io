@@ -1,0 +1,158 @@
+baseURL: https://peter.heisig.rocks
+
+author:
+  name: Peter Heisig
+
+defaultContentLanguage: de
+theme: hello-friend
+
+PygmentsCodeFences: true
+PygmentsStyle: monokai
+rssLimit: 10
+
+copyright: This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+
+archetypeDir: archetypes
+contentDir: content
+dataDir: data
+layoutDir: layouts
+publishDir: public
+
+disqusShortname: pehei
+googleAnalytics: UA-3690899-5
+
+buildDrafts: false
+buildFuture: false
+buildExpored: false
+canonifyURLs: true
+
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: true
+enableMissingTranslationPlaceholders: true
+
+disableRSS: false
+disableSitemap: false
+disable404: false
+disableHugoGeneratorInject: false
+
+permalinks:
+  posts: posts/:title/
+
+blackfriday:
+  hrefTargetBlank: true
+
+privacy:
+  disqus:
+    disable: true
+
+  googleAnalytics:
+    disable: false
+    anonymizeIP: true
+    respectDoNotTrack: true
+
+params:
+  homeTitle: Peter Heisig
+  gitUrl: https://github.com/phdd/website/commit/
+
+  dateform: 02.01.2006
+  dateformShort: 02.01.
+  dateformNum: 02.01.2006
+  dateformNumTime: 02.01.2006
+    
+  customJS: 
+    - /cookieconsent.js
+
+  customCSS:
+    - /flag-icon.css
+    - /cookieconsent.css
+    - /custom.css
+  
+  justifyContent: true
+  defaultTheme: dark
+  themeColor: #252627
+
+  images:
+    - /img/peter-heisig.jpg
+
+  image:
+    url: /img/peter-heisig.jpg
+    width: 1000
+    height: 999
+
+  logo:
+    logoText: $ cd /home/peter
+    url: /img/peter-heisig.jpg
+    width: 1000
+    height: 999
+
+  social:
+    - name: github
+      url: https://github.com/phdd
+    - name: xing
+      url: https://www.xing.com/profile/Peter_Heisig4
+    - name: email
+      url: mailto:peter@heisig.rocks
+
+languages:
+  de:
+    weight: 1
+    title: Peter Heisig - Softwareberatung und Entwicklung
+    homeSubtitle: Softwareberater und Entwickler
+    languageName: Deutsche
+    contentDir: content/de
+    description: Beratung, Analyse, Design, Implementierung. Full-Stack Entwicklung vom Spring Framework Backend bis zum Vue.js Frontend.
+    keywords:
+      - "Softwareentwickler, Softwarearchitekt, Sotwareberater, Webentwickler, Mobile Anwendungen, Agile Softwareentwicklung, Testing, Virtualisierung, Java, Kotlin"
+
+    menu:
+      main:
+        - identifier: posts
+          name: Posts
+          url: posts/
+          weight: 10
+        #- identifier: about
+        #  name: über mich
+        #  url: über-mich/
+        #  weight: 20
+
+      footer:
+        - identifier: imprint
+          name: Impressum
+          url: impressum/
+          weight: 10
+        - identifier: privacy-policy
+          name: Datenschutz
+          url: datenschutz/
+          weight: 20
+
+  en:
+    weight: 2
+    title: Peter Heisig - Software Consulting and Development
+    homeSubtitle: Software Consultant and Developer
+    languageName: English
+    contentDir: content/en
+    description: Analysis, Design, Implementation. Full stack engineering from Spring framework backend up to the Vue.js Frontend.
+    keywords:
+      - "Software developer, software architect, software consultant, web developer, mobile applications, agile software development, testing, virtualization, Java, Kotlin"
+
+    menu:
+      main:
+        - identifier: posts
+          name: Posts
+          url: posts/
+          weight: 10
+        #- identifier: about
+        #  name: about me
+        #  url: about-me/
+        #  weight: 20
+
+      footer:
+        - identifier: imprint
+          name: Imprint
+          url: imprint/
+          weight: 10
+        - identifier: privacy-policy
+          name: Privacy Policy
+          url: privacy-policy/
+          weight: 20

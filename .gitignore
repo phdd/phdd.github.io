@@ -1,0 +1,5 @@
+resources/_gen
+.vscode/
+*.code-workspace
+public/
+.hugo_build.lock

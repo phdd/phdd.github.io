@@ -1,0 +1,22 @@
+{{ $scr := .Scratch }}
+<script>
+  window.addEventListener("load", function() {
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#252627"
+        },
+        "button": {
+          "background": "#a9a9b3"
+        }
+      },
+      "position": "bottom-right",
+      "theme": "edgeless",
+      "content": {
+        "message": {{ i18n "cookieMessage" }},
+        "dismiss": {{ i18n "cookieDismiss" }},
+        "link": {{ i18n "cookieLearn" }},
+        "href": {{ i18n "cookieUrl" | absLangURL }}
+      }
+    })});
+</script>
