@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="Peter Heisig">
+<meta name="description"
+    content="When being tired of writing Cypher queries for prototyping: A Neo4j browser extension for editing the graph&#39;s views graphically." />
+<meta name="keywords" content="extension,neo4j" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://peter.heisig.rocks/en/posts/neo4j-graph-view-editor/" />
+
+
+<title>
+    
+    Neo4j Graph View Editor :: Peter Heisig - Software Consulting and Development 
+    
+</title>
+
+
+
+
+
+<link rel="stylesheet" href="https://peter.heisig.rocks/main.min.c467f70f5562ac8543d81da2f25cb1364ba4359b62a040d8ecd5bce0ef0a2edc.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="https://peter.heisig.rocks/flag-icon.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="https://peter.heisig.rocks/cookieconsent.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="https://peter.heisig.rocks/custom.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://peter.heisig.rocks/apple-touch-icon.png?v=9B9myNRWna">
+<link rel="icon" type="image/png" sizes="32x32" href="https://peter.heisig.rocks/favicon-32x32.png?v=9B9myNRWna">
+<link rel="icon" type="image/png" sizes="16x16" href="https://peter.heisig.rocks/favicon-16x16.png?v=9B9myNRWna">
+<link rel="manifest" href="https://peter.heisig.rocks/site.webmanifest?v=9B9myNRWna">
+<link rel="mask-icon" href="https://peter.heisig.rocks/safari-pinned-tab.svg?v=9B9myNRWna" color="#5bbad5">
+<link rel="shortcut icon" href="https://peter.heisig.rocks/favicon.ico?v=9B9myNRWna">
+
+<meta name="apple-mobile-web-app-title" content="Peter Heisig - Software Consulting and Development">
+<meta name="application-name" content="Peter Heisig - Software Consulting and Development">
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Neo4j Graph View Editor" />
+<meta property="og:description" content="When being tired of writing Cypher queries for prototyping: A Neo4j browser extension for editing the graph&#39;s views graphically." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://peter.heisig.rocks/en/posts/neo4j-graph-view-editor/" /><meta property="og:image" content="https://peter.heisig.rocks/bg.png" /><meta property="og:image" content="https://peter.heisig.rocks/toolbar.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-07-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-28T14:15:18+01:00" /><meta property="og:site_name" content="Peter Heisig - Software Consulting and Development" />
+
+<meta itemprop="name" content="Neo4j Graph View Editor">
+<meta itemprop="description" content="When being tired of writing Cypher queries for prototyping: A Neo4j browser extension for editing the graph&#39;s views graphically."><meta itemprop="datePublished" content="2018-07-27T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-01-28T14:15:18+01:00" />
+<meta itemprop="wordCount" content="979"><meta itemprop="image" content="https://peter.heisig.rocks/bg.png"><meta itemprop="image" content="https://peter.heisig.rocks/toolbar.png">
+<meta itemprop="keywords" content="extension,neo4j," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://peter.heisig.rocks/bg.png"/>
+
+<meta name="twitter:title" content="Neo4j Graph View Editor"/>
+<meta name="twitter:description" content="When being tired of writing Cypher queries for prototyping: A Neo4j browser extension for editing the graph&#39;s views graphically."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Neo4j Graph View Editor",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/peter.heisig.rocks\/en\/posts\/neo4j-graph-view-editor\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/peter.heisig.rocks\/img\/peter-heisig.jpg",
+    "width":  1000 ,
+    "height":  999 
+  },
+  "genre": "posts",
+  "keywords": "extension, neo4j",
+  "wordcount":  979 ,
+  "url": "https:\/\/peter.heisig.rocks\/en\/posts\/neo4j-graph-view-editor\/",
+  "datePublished": "2018-07-27T00:00:00\u002b00:00",
+  "dateModified": "2020-01-28T14:15:18\u002b01:00",
+  "license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Peter Heisig"
+  },
+  "description": "When being tired of writing Cypher queries for prototyping: A Neo4j browser extension for editing the graph\u0027s views graphically."
+}
+</script>  
+
+
+<meta property="article:section" content="Open Source Projects" />
+
+<meta property="article:published_time" content="2018-07-27 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://peter.heisig.rocks/en" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/peter</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://peter.heisig.rocks/en/posts/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>5 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://peter.heisig.rocks/en/posts/neo4j-graph-view-editor/">Neo4j Graph View Editor</a></h1>
+
+            
+                <img src="bg.png" class="post-cover" />
+            
+
+            <div class="post-content">
+                <h2 id="tldr">TL;DR</h2>
+<p>The Neo4j<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Browser<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> is a great tool for querying a graph and comes with a well designed user interface that supports data visualization and iterative exploration.
+But in terms of manipulation, the user has to write Cypher<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>-queries, respectively knowing the language in detail.
+I forked the GitHub-Project<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> and extended the user interface for the sake of visual data manipulation.
+This allow rapid model prototyping and evolution without querying the graph with Cypher.
+A drawback is the inconsistency between multiple visualizations because of a missing synchonization mechanism.
+Assuming a running Neo4j instance, run the Docker container<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> and give it a try.</p>
+<h2 id="its-a-graph">It&rsquo;s a Graph!</h2>
+<p>A colleague and I were discussing the problem space of <em>Digital Health</em> and it&rsquo;s embedding in information science.
+We designed a multi-dimensional euclidean model addressing the people&rsquo;s roles on one axis, their general health state on the other, treatment on the next, etc.
+Our goal was to provide a framework for the definition of any research project&rsquo;s location within the domain &ndash; the project landscape.
+A few month later we met a medical doctor from whom we gained great insight into the real, non-academic version of the problem space we thought we&rsquo;d already understand.
+Long story short. It is rather a graph than a multi-dimensional euclidean space.
+So we took a tool called Neo4j and it&rsquo;s pretty neat browser to model such a graph.
+While prototyping, we noticed that it&rsquo;s not feasible to write Cypher-queries for every small property change or node connection addition and deletion.
+In general we wanted a user interface which allows rapid prototyping and easy model evolution.</p>
+<h2 id="hacking-a-browser">Hacking a Browser</h2>
+<p>Neo4j allows us to contribute and improve the software by its very own open source nature.
+I checked out the source and found a complex looking React<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> Javascript application.
+You can argue as much as you want; I don&rsquo;t think markup, stylesheets and business logic should go into one file.
+Don&rsquo;t get me the wrong way, as a software engineer, I love the idea of &ldquo;everything is a component&rdquo;.
+But why should I forsake a well established, thousand-times-proven software engineering approach and melt down those carefully separated aspects into one single file?
+Maybe it&rsquo;s part of the modern Javascript movement where it&rsquo;s desirable to get as much dependencies to proprietary transpilers and outdated software libraries as you can.
+Anyway, I&rsquo;m getting a little off-topic here. 😉</p>
+<p>If you execute a Cypher query with the browser, you&rsquo;ll get a visualization frame.
+There&rsquo;s a bar on top of the visualization itself, giving you all the labels and relationship types that have been found and their cardinality.
+Below the visualization is the inspector.
+When selecting a node, it&rsquo;s labels and properties are shown.
+Select a relationship and you&rsquo;ll see it&rsquo;s type and properties.</p>
+
+    <figure class="center" >
+        <img src="toolbar.png"    />
+
+        
+            <figcaption class="center" >Introduced toolbar and additional inspector buttons</figcaption>
+        
+    </figure>
+
+
+<h3 id="manipulating-nodes--relationships">Manipulating Nodes &amp; Relationships</h3>
+<p>As you can see in the image above, I added a tree button toolbar to the bottom left, right above the inspector.
+They&rsquo;re all working depending on the context, i.e. the selection you&rsquo;ve taken within the visualization.
+The first one deletes either a node or a relationship, depending on what&rsquo;s currently selected.
+Depicted as a closed chain, the second one will lead into a relationship creation mode.
+For this to work, you should select a node, go into the aforementioned mode and click the target of the new connection.
+The last one works when nothing&rsquo;s selected and creates a new node.<br>
+New nodes will have a label named <code>Unlabeled</code> and new relationships will be <code>untyped</code>.
+But don&rsquo;t worry, you&rsquo;ll have the option to refine both.
+I decided to assign a default label and type to identify unrefined nodes and relationships for keeping the model clean and concise.
+You may query your model for those, thus checking it&rsquo;s integrity.</p>
+<pre tabindex="0"><code class="language-cypher" data-lang="cypher">MATCH (a:Unlabeled)
+MATCH (b)-[:untyped]-(c)
+RETURN a, b, c;
+</code></pre><h3 id="labels--types">Labels &amp; Types</h3>
+<p>If you create a node or a relationship, there&rsquo;ll be a default label or type.
+You should alter those to match the domain you&rsquo;re modeling.
+When you click on a node&rsquo;s label, it will be deleted.
+Clicking on the plus sign right behind the labels section within the inspector, you&rsquo;ll get a dialog asking for a new label.
+Nearly the same interaction holds for relationship types.
+But in contrast to node labels, a relationship has exactly one type and can therefore not be deleted.</p>
+<h3 id="properties">Properties</h3>
+<p>A click on a property&rsquo;s name will will delete the property.
+If you intent to change a property, just click on it&rsquo;s value.
+New properties can be created with the plus button behind the list of existing ones.
+The last two actions will open a dialog with key and value text input.</p>
+<h2 id="alternatives">Alternatives</h2>
+<p>All the implementation work may seem redundant when you search for Neo4j graph editing tools.
+Just go to the Neo4j data visualization guide<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> and check some of them out.
+They all seem appropriate, but have at least one of the following drawbacks.
+Either you write most of the user interface and it&rsquo;s connection to the database yourself, or you pay a company to get a proprietary product.
+One open source project currently in development may replace the Neo4j browser in the future or give us graph editing functionality at least<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>.</p>
+<p>The originality given by this implementation lies in it&rsquo;s open source character extending work that has already been done pretty well by the guys that build this graph database and browser.
+A problem is the missing synchronization mechanism for multiple visualization frames, but for my projects, this isn&rsquo;t an issue.</p>
+<h2 id="and-now">And now?</h2>
+<p>Go run the Docker container<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> and try my editor.
+You can contribute to this project at GitHub<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> as well.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Neo4j graph platform, <a href="https://neo4j.com">neo4j.com</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Neo4j browser, <a href="https://neo4j.com/developer/guide-neo4j-browser/">neo4j.com/developer/guide-neo4j-browser</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Cypher query language, <a href="https://neo4j.com/developer/cypher/">neo4j.com/developer/cypher</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>Forked GitHub-Project of the Neo4j browser <a href="https://github.com/phdd/neo4j-browser">github.com/phdd/neo4j-browser</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><code>docker run --name neo4j-editor -d -p 8080:80 phdd/neo4j-browser</code>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p>React Javascript framework, <a href="https://reactjs.org/">reactjs.org</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p>Neo4j data visualization guide, <a href="https://neo4j.com/developer/guide-data-visualization/">neo4j.com/developer/guide-data-visualization</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p>A Neo4j graph editor written in Javascript, <a href="https://github.com/adadgio/neo4j-js">github.com/adadgio/neo4j-js</a>&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg><span class="category"><a href="https://peter.heisig.rocks/en/categories/open-source-projects">Open Source Projects</a></span>
+                </p>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://peter.heisig.rocks/en/tags/extension">extension</a></span><span class="tag"><a href="https://peter.heisig.rocks/en/tags/neo4j">neo4j</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>979 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>27.07.2018</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/phdd/website/commit/f41a65eec12bff0c71c395b1216622dc3be074c9" target="_blank" rel="noopener">f41a65e</a> @ 28.01.2020</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h"></span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://peter.heisig.rocks/en/posts/thunderbird-taiga-integration/">
+                                <span class="button__text">Thunderbird Taiga Integration</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <nav class="menuFooter">
+                <ul class="menu__inner small"><li><a href="https://peter.heisig.rocks/en/imprint/">Imprint</a></li><li><a href="https://peter.heisig.rocks/en/privacy-policy/">Privacy Policy</a></li>
+                </ul>
+            </nav>                    
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content small">
+            <span>&copy; 2022 Peter Heisig <a href="https://peter.heisig.rocks/en/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content small">
+            <span>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a> &middot; Made with &#10084; by <a href="https://github.com/rhazdon" target="_blank">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+<script>
+  window.addEventListener("load", function() {
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#252627"
+        },
+        "button": {
+          "background": "#a9a9b3"
+        }
+      },
+      "position": "bottom-right",
+      "theme": "edgeless",
+      "content": {
+        "message": "We use cookies to personalize content and analyze traffic to our site. You agree to our cookies if you continue to use our website.",
+        "dismiss": "Got it!",
+        "link": "Privacy Policy",
+        "href": "https://peter.heisig.rocks/en/privacy-policy"
+      }
+    })});
+</script>
+
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://peter.heisig.rocks/bundle.min.2e41f03d11de0d5dcc199de839278d4b9fa963ed506d9a7a6af7b179daea5ee06f66c705680d8f31c657b4cb31ed50b710dd9250c4b6c6e2eae9bbdf2a1e391f.js" integrity="sha512-LkHwPRHeDV3MGZ3oOSeNS5&#43;pY&#43;1QbZp6avexedrqXuBvZscFaA2PMcZXtMsx7VC3EN2SUMS2xuLq6bvfKh45Hw=="></script>
+
+
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-3690899-5', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+	
+		<script src="https://peter.heisig.rocks/cookieconsent.js"></script>
+	
+
+
+    </body>
+</html>

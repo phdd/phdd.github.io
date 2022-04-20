@@ -1,0 +1,248 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Peter Heisig - Software Consulting and Development</title>
+        <link>https://peter.heisig.rocks/en/posts/</link>
+        <description>Recent content in Posts on Peter Heisig - Software Consulting and Development</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <atom:link href="https://peter.heisig.rocks/en/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Neo4j Graph View Editor</title>
+            <link>https://peter.heisig.rocks/en/posts/neo4j-graph-view-editor/</link>
+            <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
+            
+            <guid>https://peter.heisig.rocks/en/posts/neo4j-graph-view-editor/</guid>
+            <description>TL;DR The Neo4j1 Browser2 is a great tool for querying a graph and comes with a well designed user interface that supports data visualization and iterative exploration. But in terms of manipulation, the user has to write Cypher3-queries, respectively knowing the language in detail. I forked the GitHub-Project4 and extended the user interface for the sake of visual data manipulation. This allow rapid model prototyping and evolution without querying the graph with Cypher.</description>
+            <content type="html"><![CDATA[<h2 id="tldr">TL;DR</h2>
+<p>The Neo4j<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Browser<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> is a great tool for querying a graph and comes with a well designed user interface that supports data visualization and iterative exploration.
+But in terms of manipulation, the user has to write Cypher<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>-queries, respectively knowing the language in detail.
+I forked the GitHub-Project<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> and extended the user interface for the sake of visual data manipulation.
+This allow rapid model prototyping and evolution without querying the graph with Cypher.
+A drawback is the inconsistency between multiple visualizations because of a missing synchonization mechanism.
+Assuming a running Neo4j instance, run the Docker container<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> and give it a try.</p>
+<h2 id="its-a-graph">It&rsquo;s a Graph!</h2>
+<p>A colleague and I were discussing the problem space of <em>Digital Health</em> and it&rsquo;s embedding in information science.
+We designed a multi-dimensional euclidean model addressing the people&rsquo;s roles on one axis, their general health state on the other, treatment on the next, etc.
+Our goal was to provide a framework for the definition of any research project&rsquo;s location within the domain &ndash; the project landscape.
+A few month later we met a medical doctor from whom we gained great insight into the real, non-academic version of the problem space we thought we&rsquo;d already understand.
+Long story short. It is rather a graph than a multi-dimensional euclidean space.
+So we took a tool called Neo4j and it&rsquo;s pretty neat browser to model such a graph.
+While prototyping, we noticed that it&rsquo;s not feasible to write Cypher-queries for every small property change or node connection addition and deletion.
+In general we wanted a user interface which allows rapid prototyping and easy model evolution.</p>
+<h2 id="hacking-a-browser">Hacking a Browser</h2>
+<p>Neo4j allows us to contribute and improve the software by its very own open source nature.
+I checked out the source and found a complex looking React<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> Javascript application.
+You can argue as much as you want; I don&rsquo;t think markup, stylesheets and business logic should go into one file.
+Don&rsquo;t get me the wrong way, as a software engineer, I love the idea of &ldquo;everything is a component&rdquo;.
+But why should I forsake a well established, thousand-times-proven software engineering approach and melt down those carefully separated aspects into one single file?
+Maybe it&rsquo;s part of the modern Javascript movement where it&rsquo;s desirable to get as much dependencies to proprietary transpilers and outdated software libraries as you can.
+Anyway, I&rsquo;m getting a little off-topic here. 😉</p>
+<p>If you execute a Cypher query with the browser, you&rsquo;ll get a visualization frame.
+There&rsquo;s a bar on top of the visualization itself, giving you all the labels and relationship types that have been found and their cardinality.
+Below the visualization is the inspector.
+When selecting a node, it&rsquo;s labels and properties are shown.
+Select a relationship and you&rsquo;ll see it&rsquo;s type and properties.</p>
+
+    <figure class="center" >
+        <img src="toolbar.png"    />
+
+        
+            <figcaption class="center" >Introduced toolbar and additional inspector buttons</figcaption>
+        
+    </figure>
+
+
+<h3 id="manipulating-nodes--relationships">Manipulating Nodes &amp; Relationships</h3>
+<p>As you can see in the image above, I added a tree button toolbar to the bottom left, right above the inspector.
+They&rsquo;re all working depending on the context, i.e. the selection you&rsquo;ve taken within the visualization.
+The first one deletes either a node or a relationship, depending on what&rsquo;s currently selected.
+Depicted as a closed chain, the second one will lead into a relationship creation mode.
+For this to work, you should select a node, go into the aforementioned mode and click the target of the new connection.
+The last one works when nothing&rsquo;s selected and creates a new node.<br>
+New nodes will have a label named <code>Unlabeled</code> and new relationships will be <code>untyped</code>.
+But don&rsquo;t worry, you&rsquo;ll have the option to refine both.
+I decided to assign a default label and type to identify unrefined nodes and relationships for keeping the model clean and concise.
+You may query your model for those, thus checking it&rsquo;s integrity.</p>
+<pre tabindex="0"><code class="language-cypher" data-lang="cypher">MATCH (a:Unlabeled)
+MATCH (b)-[:untyped]-(c)
+RETURN a, b, c;
+</code></pre><h3 id="labels--types">Labels &amp; Types</h3>
+<p>If you create a node or a relationship, there&rsquo;ll be a default label or type.
+You should alter those to match the domain you&rsquo;re modeling.
+When you click on a node&rsquo;s label, it will be deleted.
+Clicking on the plus sign right behind the labels section within the inspector, you&rsquo;ll get a dialog asking for a new label.
+Nearly the same interaction holds for relationship types.
+But in contrast to node labels, a relationship has exactly one type and can therefore not be deleted.</p>
+<h3 id="properties">Properties</h3>
+<p>A click on a property&rsquo;s name will will delete the property.
+If you intent to change a property, just click on it&rsquo;s value.
+New properties can be created with the plus button behind the list of existing ones.
+The last two actions will open a dialog with key and value text input.</p>
+<h2 id="alternatives">Alternatives</h2>
+<p>All the implementation work may seem redundant when you search for Neo4j graph editing tools.
+Just go to the Neo4j data visualization guide<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> and check some of them out.
+They all seem appropriate, but have at least one of the following drawbacks.
+Either you write most of the user interface and it&rsquo;s connection to the database yourself, or you pay a company to get a proprietary product.
+One open source project currently in development may replace the Neo4j browser in the future or give us graph editing functionality at least<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>.</p>
+<p>The originality given by this implementation lies in it&rsquo;s open source character extending work that has already been done pretty well by the guys that build this graph database and browser.
+A problem is the missing synchronization mechanism for multiple visualization frames, but for my projects, this isn&rsquo;t an issue.</p>
+<h2 id="and-now">And now?</h2>
+<p>Go run the Docker container<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> and try my editor.
+You can contribute to this project at GitHub<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> as well.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Neo4j graph platform, <a href="https://neo4j.com">neo4j.com</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Neo4j browser, <a href="https://neo4j.com/developer/guide-neo4j-browser/">neo4j.com/developer/guide-neo4j-browser</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Cypher query language, <a href="https://neo4j.com/developer/cypher/">neo4j.com/developer/cypher</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>Forked GitHub-Project of the Neo4j browser <a href="https://github.com/phdd/neo4j-browser">github.com/phdd/neo4j-browser</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><code>docker run --name neo4j-editor -d -p 8080:80 phdd/neo4j-browser</code>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p>React Javascript framework, <a href="https://reactjs.org/">reactjs.org</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p>Neo4j data visualization guide, <a href="https://neo4j.com/developer/guide-data-visualization/">neo4j.com/developer/guide-data-visualization</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p>A Neo4j graph editor written in Javascript, <a href="https://github.com/adadgio/neo4j-js">github.com/adadgio/neo4j-js</a>&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Thunderbird Taiga Integration</title>
+            <link>https://peter.heisig.rocks/en/posts/thunderbird-taiga-integration/</link>
+            <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+            
+            <guid>https://peter.heisig.rocks/en/posts/thunderbird-taiga-integration/</guid>
+            <description>As described in the Getting Things Done methodology we have to cope with a large amount of incoming information; E-mails are outdated, but still heavily used. They are trapped in our client software, only transferable by copy and paste. Thus we need a way to import those into our favorite project management system to actually get things done.
+Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose.</description>
+            <content type="html"><![CDATA[<p>As described in the <em>Getting Things Done</em> methodology we have to cope with a large amount of incoming information; E-mails are outdated, but still heavily used.
+They are trapped in our client software, only transferable by copy and paste.
+Thus we need a way to import those into our favorite project management system to actually get things done.</p>
+<p>Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose.
+It converts Thunderbirds mails to user stories, tasks and tickets for the <a href="https://taiga.io">Taiga project management system</a>.
+You can get the plugin at <a href="https://addons.mozilla.org/de/thunderbird/addon/thunderbird-taiga-integration/">thunderbird&rsquo;s addon repository</a>.
+And if you like to contribute go to my the <a href="https://github.com/phdd/thunderbird-taiga-integration">GitHub repository</a>.
+Those sources are licensed under the <a href="http://mozilla.org/MPL/2.0/">Mozilla Public License, v. 2.0</a>.</p>
+<p>Please keep in mind, that this is an early version missing some of the aforementioned features.
+When I get the time, it&rsquo;ll move forward. Another way is community contribution, obviously.</p>
+<h2 id="usage">Usage</h2>
+<p>There are two ways to this addon. Right click on an E-mail and choose <code>Taiga</code> or select one and do likewise through <code>Message &gt; Taiga</code>.
+If any of the menu seems disabled, there might be something wrong with the addon&rsquo;s settings.</p>
+<h3 id="authentication">Authentication</h3>
+<p>The user authenticates with a token against any Taiga-instance.
+There&rsquo;s an application token, especially for this addon&rsquo;s use-case, and a user token authenticating the user himself.
+Since Taiga&rsquo;s application token flow is rather unusable, authentication is done via the user&rsquo;s bearer-token.
+To obtain this token, log in to your Taiga, open the developer console and get it from the application&rsquo;s local storage.
+The following screencast illustrates this slightly hacky solution.</p>
+
+    <figure class="center" >
+        <img src="token-screencast.gif"    />
+
+        
+            <figcaption class="center" >Obtain User Token</figcaption>
+        
+    </figure>
+
+
+<h2 id="appendix">Appendix</h2>
+<h3 id="contribution">Contribution</h3>
+<p>Feel free to comment and give some feedback. For all the technical stuff, bug reports, pull requests, etc., please go to the
+<a href="https://github.com/phdd/thunderbird-taiga-integration">GitHub repository</a> and <strong>contribute</strong>.</p>
+<h3 id="screenshots">Screenshots</h3>
+
+    <figure class="center" >
+        <img src="settings.png"    />
+
+        
+            <figcaption class="center" >Setup your Taiga instance</figcaption>
+        
+    </figure>
+
+
+
+    <figure class="center" >
+        <img src="ticket.png"    />
+
+        
+            <figcaption class="center" >Create Taiga Ticket</figcaption>
+        
+    </figure>
+
+
+<h3 id="features">Features</h3>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>Version</th>
+<th style="text-align:left">Dev. State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Message to Markdown</td>
+<td><em>1.0</em></td>
+<td style="text-align:left">🌕</td>
+</tr>
+<tr>
+<td>Watchers from E-mail</td>
+<td><em>1.0</em></td>
+<td style="text-align:left">🌕</td>
+</tr>
+<tr>
+<td>Upload attachments</td>
+<td><em>1.0</em></td>
+<td style="text-align:left">🌕</td>
+</tr>
+<tr>
+<td>German Translation</td>
+<td><em>1.0</em></td>
+<td style="text-align:left">🌕</td>
+</tr>
+<tr>
+<td>Wizard: create Issue</td>
+<td><em>1.0</em></td>
+<td style="text-align:left">🌕</td>
+</tr>
+<tr>
+<td>Wizard: create User-Story</td>
+<td><em>2.0</em></td>
+<td style="text-align:left">🌓</td>
+</tr>
+<tr>
+<td>Wizard: create Task</td>
+<td><em>3.0</em></td>
+<td style="text-align:left">🌓</td>
+</tr>
+<tr>
+<td>Wizard: Comment</td>
+<td><em>4.0</em></td>
+<td style="text-align:left">🌓</td>
+</tr>
+<tr>
+<td>Wizard: Upload Attachments</td>
+<td><em>5.0</em></td>
+<td style="text-align:left">🌓</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

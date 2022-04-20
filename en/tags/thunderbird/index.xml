@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>thunderbird on Peter Heisig - Software Consulting and Development</title>
+    <link>https://peter.heisig.rocks/en/tags/thunderbird/</link>
+    <description>Recent content in thunderbird on Peter Heisig - Software Consulting and Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Tue, 06 Mar 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://peter.heisig.rocks/en/tags/thunderbird/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thunderbird Taiga Integration</title>
+      <link>https://peter.heisig.rocks/en/posts/thunderbird-taiga-integration/</link>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://peter.heisig.rocks/en/posts/thunderbird-taiga-integration/</guid>
+      <description>As described in the Getting Things Done methodology we have to cope with a large amount of incoming information; E-mails are outdated, but still heavily used. They are trapped in our client software, only transferable by copy and paste. Thus we need a way to import those into our favorite project management system to actually get things done.
+Working with Taiga and Thunderbird for quite a while now, I managed to write a thunderbird extension for this very purpose.</description>
+    </item>
+    
+  </channel>
+</rss>
