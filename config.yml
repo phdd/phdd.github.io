@@ -53,7 +53,7 @@ privacy:
 
 params:
   homeTitle: Peter Heisig
-  gitUrl: https://github.com/phdd/website/commit/
+  gitUrl: https://github.com/phdd/phdd.github.io/commit/
 
   dateform: 02.01.2006
   dateformShort: 02.01.
@@ -90,7 +90,7 @@ params:
     - name: github
       url: https://github.com/phdd
     - name: xing
-      url: https://www.xing.com/profile/Peter_Heisig4
+      url: https://www.xing.com/profile/Peter_Heisig8
     - name: email
       url: mailto:peter@heisig.rocks
 
