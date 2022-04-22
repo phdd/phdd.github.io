@@ -10,7 +10,7 @@ images:
   - toolbar.png
 
 tags:
-  - neo4j
+  - Neo4j
 
 categories:
   - Open Source Projects

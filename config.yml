@@ -47,7 +47,7 @@ privacy:
     disable: true
 
   googleAnalytics:
-    disable: false
+    disable: true
     anonymizeIP: true
     respectDoNotTrack: true
 

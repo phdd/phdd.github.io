@@ -6,7 +6,7 @@ published: 2018-07-27
 excludeFromSitemap: true
 
 tags:
-  - neo4j
+  - Neo4j
 
 categories:
   - Open Source Projects

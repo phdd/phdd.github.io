@@ -12,15 +12,15 @@ images:
   - token-screencast.gif
 
 tags:
-    - thunderbird
-    - taiga
+  - Thunderbird
+  - Taiga.io
 
 categories:
   - Open Source Projects
 
 aliases:
-    - /post/thunderbird-taiga-integration/
-    - /posts/thunderbird-taiga-integration-englisch/
+  - /post/thunderbird-taiga-integration/
+  - /posts/thunderbird-taiga-integration-englisch/
 
 ---
 

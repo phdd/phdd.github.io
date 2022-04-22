@@ -6,8 +6,8 @@ published: 2018-03-06
 excludeFromSitemap: true
 
 tags:
-    - thunderbird
-    - taiga
+  - Thunderbird
+  - Taiga.io
 
 categories:
   - Open Source Projects
