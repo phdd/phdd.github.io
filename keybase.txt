@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/phdd
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://pehei.de
+  * I am phdd (https://keybase.io/phdd) on keybase.
+  * I have a public key ASBEUhd6-kAR8BRcfT0az-u1F7R9IKpDiI3iW9E54A3hbAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101c9479b264c66e27fabb1b3e088ba7f6c539e709708650dfee7da24282ab348aa0a",
+      "host": "keybase.io",
+      "kid": "01204452177afa4011f0145c7d3d1acfebb517b47d20aa43888de25bd139e00de16c0a",
+      "uid": "b12964b3b1d867fe23e175b492f59819",
+      "username": "phdd"
+    },
+    "merkle_root": {
+      "ctime": 1580456919,
+      "hash": "214c88fa3930e2a6d67baf9c8eb5e462898070e010a22b1312ff7683521380b0dc6a75eccb6fd7097b05af820035a011a232a8dc536b412ddbb1d6a3b7adbc2e",
+      "hash_meta": "c6977d22dd7afeadbcaa36fb6d59805d3e1256b6738e70862622603be4dc0c3b",
+      "seqno": 14430390
+    },
+    "service": {
+      "entropy": "VqNAy71QUJRy8z4OoARAr74N",
+      "hostname": "pehei.de",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.1.1"
+  },
+  "ctime": 1580456946,
+  "expire_in": 504576000,
+  "prev": "bc14f278bec61f7d9855f9fd3e963b30cb38234cf0dec6a88e4a1b43f67cc1c3",
+  "seqno": 40,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgRFIXevpAEfAUXH09Gs/rtRe0fSCqQ4iN4lvROeAN4WwKp3BheWxvYWTESpcCKMQgvBTyeL7GH32YVfn9PpY7MMs4I0zw3saojkobQ/Z8wcPEICBg7NgDY+oiLk1LQR6TkkR0ebE626g4PH1SrHwLZQt+AgHCo3NpZ8RAAcZ9exMqzS2ZVFcXjMHtQDS9MTjIr5YaG2jn2hRSo0Fv6mbKbEZ/QYbz1N1VcWFrsEr36UrQzBge6QX7MPlvAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINsxyvnLUJpXT/q3tZ5xojknrXGHzbpYbpzoMwTXzaDmo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/phdd
+
+==================================================================
