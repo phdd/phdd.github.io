@@ -5,12 +5,12 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=author content="Peter Heisig">
 <meta name=description content="When being tired of writing Cypher queries for prototyping: A Neo4j browser extension for editing the graph's views graphically.">
-<meta name=keywords content="neo4j">
+<meta name=keywords content="Neo4j">
 <meta name=robots content="noodp">
 <link rel=canonical href=https://peter.heisig.rocks/en/posts/neo4j-graph-view-editor/>
 <title>
 Neo4j Graph View Editor :: Peter Heisig - Software Consulting and Development
-</title><link rel=stylesheet href=https://peter.heisig.rocks/main.min.feca676bd2344243429c1be3db7ad89c169586b90da8dd758767ee900ec735ef.css>
+</title><link rel=stylesheet href=https://peter.heisig.rocks/main.min.ed5758b29813392f3879de290ff7614889ddebebb0abb757cdecc95350d2bf6c.css>
 <link rel=stylesheet type=text/css href=https://peter.heisig.rocks/flag-icon.css>
 <link rel=stylesheet type=text/css href=https://peter.heisig.rocks/cookieconsent.css>
 <link rel=stylesheet type=text/css href=https://peter.heisig.rocks/custom.css>
@@ -29,16 +29,16 @@ Neo4j Graph View Editor :: Peter Heisig - Software Consulting and Development
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://peter.heisig.rocks/en/posts/neo4j-graph-view-editor/"><meta property="og:image" content="https://peter.heisig.rocks/bg.png"><meta property="og:image" content="https://peter.heisig.rocks/toolbar.png"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2018-07-27T00:00:00+00:00">
-<meta property="article:modified_time" content="2022-04-22T09:41:22+02:00"><meta property="og:site_name" content="Peter Heisig - Software Consulting and Development">
+<meta property="article:modified_time" content="2022-04-22T10:34:00+02:00"><meta property="og:site_name" content="Peter Heisig - Software Consulting and Development">
 <meta itemprop=name content="Neo4j Graph View Editor">
 <meta itemprop=description content="When being tired of writing Cypher queries for prototyping: A Neo4j browser extension for editing the graph's views graphically."><meta itemprop=datePublished content="2018-07-27T00:00:00+00:00">
-<meta itemprop=dateModified content="2022-04-22T09:41:22+02:00">
+<meta itemprop=dateModified content="2022-04-22T10:34:00+02:00">
 <meta itemprop=wordCount content="979"><meta itemprop=image content="https://peter.heisig.rocks/bg.png"><meta itemprop=image content="https://peter.heisig.rocks/toolbar.png">
-<meta itemprop=keywords content="neo4j,"><meta name=twitter:card content="summary_large_image">
+<meta itemprop=keywords content="Neo4j,"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://peter.heisig.rocks/bg.png">
 <meta name=twitter:title content="Neo4j Graph View Editor">
 <meta name=twitter:description content="When being tired of writing Cypher queries for prototyping: A Neo4j browser extension for editing the graph's views graphically.">
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Neo4j Graph View Editor","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/peter.heisig.rocks\/en\/posts\/neo4j-graph-view-editor\/"},"image":{"@type":"ImageObject","url":"https:\/\/peter.heisig.rocks\/img\/peter-heisig.jpg","width":1e3,"height":999},"genre":"posts","keywords":"neo4j","wordcount":979,"url":"https:\/\/peter.heisig.rocks\/en\/posts\/neo4j-graph-view-editor\/","datePublished":"2018-07-27T00:00:00\u002b00:00","dateModified":"2022-04-22T09:41:22\u002b02:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","author":{"@type":"Person","name":"Peter Heisig"},"description":"When being tired of writing Cypher queries for prototyping: A Neo4j browser extension for editing the graph\u0027s views graphically."}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Neo4j Graph View Editor","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/peter.heisig.rocks\/en\/posts\/neo4j-graph-view-editor\/"},"image":{"@type":"ImageObject","url":"https:\/\/peter.heisig.rocks\/img\/peter-heisig.jpg","width":1e3,"height":999},"genre":"posts","keywords":"Neo4j","wordcount":979,"url":"https:\/\/peter.heisig.rocks\/en\/posts\/neo4j-graph-view-editor\/","datePublished":"2018-07-27T00:00:00\u002b00:00","dateModified":"2022-04-22T10:34:00\u002b02:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","author":{"@type":"Person","name":"Peter Heisig"},"description":"When being tired of writing Cypher queries for prototyping: A Neo4j browser extension for editing the graph\u0027s views graphically."}</script>
 <meta property="article:section" content="Open Source Projects">
 <meta property="article:published_time" content="2018-07-27 00:00:00 +0000 UTC">
 </head><body>
@@ -60,11 +60,14 @@ Neo4j Graph View Editor :: Peter Heisig - Software Consulting and Development
 </header><div class=content>
 <main class=post>
 <div class=post-info>
-<p>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>5 minutes
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+5 minutes
 </p></div><article>
-<h1 class=post-title><a href=https://peter.heisig.rocks/en/posts/neo4j-graph-view-editor/>Neo4j Graph View Editor</a></h1><img src=bg.png class=post-cover>
-<div class=post-content>
+<h1 class=post-title>
+<a href=https://peter.heisig.rocks/en/posts/neo4j-graph-view-editor/>Neo4j Graph View Editor</a>
+</h1><div class=post-excerpt>When being tired of writing Cypher queries for prototyping: A Neo4j browser extension for editing the graph's views graphically.</div><figure class=post-cover>
+<img src=bg.png alt="Neo4j Graph View Editor">
+</figure><div class=post-content>
 <h2 id=tldr>TL;DR</h2><p>The Neo4j<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> Browser<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup> is a great tool for querying a graph and comes with a well designed user interface that supports data visualization and iterative exploration.
 But in terms of manipulation, the user has to write Cypher<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>-queries, respectively knowing the language in detail.
 I forked the GitHub-Project<sup id=fnref:4><a href=#fn:4 class=footnote-ref role=doc-noteref>4</a></sup> and extended the user interface for the sake of visual data manipulation.
@@ -128,22 +131,28 @@ You can contribute to this project at GitHub<sup id=fnref:4><a href=#fn:4 class=
 <p>Neo4j data visualization guide, <a href=https://neo4j.com/developer/guide-data-visualization/>neo4j.com/developer/guide-data-visualization</a>&#160;<a href=#fnref:7 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:8 role=doc-endnote>
 <p>A Neo4j graph editor written in Javascript, <a href=https://github.com/adadgio/neo4j-js>github.com/adadgio/neo4j-js</a>&#160;<a href=#fnref:8 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></section></div></article><hr>
 <div class=post-info>
-<p>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg><span class=category><a href=https://peter.heisig.rocks/en/categories/open-source-projects>Open Source Projects</a></span>
-</p><p>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg><span class=tag><a href=https://peter.heisig.rocks/en/tags/neo4j>neo4j</a></span>
-</p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>979 Words</p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>27.07.2018</p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"/><line x1="1.05" y1="12" x2="7" y2="12"/><line x1="17.01" y1="12" x2="22.96" y2="12"/></svg><a href=https://github.com/phdd/phdd.github.io/commit/252793b0dedf67d41a41cd453408f379bf7e953d target=_blank rel=noopener>252793b</a> @ 22.04.2022</p></div><div class=pagination>
-<div class=pagination__title>
-<span class=pagination__title-h></span>
-<hr>
-</div><div class=pagination__buttons>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7" y2="7"/></svg>
+<span class=tag><a href=https://peter.heisig.rocks/en/tags/neo4j/>Neo4j</a></span>
+</p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+<span class=tag><a href=https://peter.heisig.rocks/en/categories/open-source-projects/>Open Source Projects</a></span>
+</p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+979 Words
+</p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+27.07.2018
+(Last updated: 22.04.2022)
+</p><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"/><line x1="1.05" y1="12" x2="7" y2="12"/><line x1="17.01" y1="12" x2="22.96" y2="12"/></svg>
+<a href=https://github.com/phdd/phdd.github.io/commit/d560e1f424f97a73960f2304867596aef63a6f52 target=_blank rel=noopener>d560e1f</a>
+@ 22.04.2022
+</p></div><div class=pagination>
+<div class=pagination__buttons>
 <span class="button next">
 <a href=https://peter.heisig.rocks/en/posts/thunderbird-taiga-integration/>
 <span class=button__text>Thunderbird Taiga Integration</span>
 <span class=button__icon>→</span>
 </a>
 </span>
-</div></div></main></div><footer class=footer>
+</div></div><div id=comments>
+</div></main></div><footer class=footer>
 <div class=footer__inner>
 <div class=footer__content>
 <nav class=menuFooter>
