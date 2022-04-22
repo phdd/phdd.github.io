@@ -10,7 +10,6 @@ images:
   - toolbar.png
 
 tags:
-  - extension
   - neo4j
 
 categories:

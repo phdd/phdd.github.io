@@ -12,7 +12,6 @@ images:
   - token-screencast.gif
 
 tags:
-    - integration
     - thunderbird
     - taiga
 

@@ -6,7 +6,6 @@ published: 2018-03-06
 excludeFromSitemap: true
 
 tags:
-    - integration
     - thunderbird
     - taiga
 

@@ -6,7 +6,6 @@ published: 2018-07-27
 excludeFromSitemap: true
 
 tags:
-  - extension
   - neo4j
 
 categories:
