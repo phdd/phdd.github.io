@@ -19,7 +19,6 @@ layoutDir: layouts
 publishDir: public
 
 disqusShortname: pehei
-googleAnalytics: UA-3690899-5
 
 buildDrafts: false
 buildFuture: false
