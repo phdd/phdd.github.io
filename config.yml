@@ -98,7 +98,7 @@ params:
 languages:
   de:
     weight: 1
-    title: Peter Heisig - Softwareberatung und Entwicklung
+    title: Peter Heisig Software
     homeSubtitle: Softwareberater und Entwickler
     languageName: Deutsche
     contentDir: content/de
@@ -107,7 +107,11 @@ languages:
       - "Softwareentwickler, Softwarearchitekt, Sotwareberater, Webentwickler, Mobile Anwendungen, Agile Softwareentwicklung, Testing, Virtualisierung, Java, Kotlin"
 
     menu:
-      main: []
+      main:
+        - identifier: meet
+          name: kennenlernen
+          url: https://cal.com/peterheisig/kennenlernen
+          weigth: 10
         # - identifier: posts
         #   name: Posts
         #   url: posts/
@@ -129,7 +133,7 @@ languages:
 
   en:
     weight: 2
-    title: Peter Heisig - Software Consulting and Development
+    title: Peter Heisig Software
     homeSubtitle: Software Consultant and Developer
     languageName: English
     contentDir: content/en
@@ -138,7 +142,11 @@ languages:
       - "Software developer, software architect, software consultant, web developer, mobile applications, agile software development, testing, virtualization, Java, Kotlin"
 
     menu:
-      main: []
+      main:
+        - identifier: meet
+          name: meet
+          url: https://cal.com/peterheisig/kennenlernen
+          weigth: 10
         # - identifier: posts
         #   name: Posts
         #   url: posts/
