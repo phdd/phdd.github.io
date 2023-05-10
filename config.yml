@@ -136,11 +136,11 @@ languages:
       - "Software developer, software architect, software consultant, web developer, mobile applications, agile software development, testing, virtualization, Java, Kotlin"
 
     menu:
-      main:
-        - identifier: posts
-          name: Posts
-          url: posts/
-          weight: 10
+      main: []
+        # - identifier: posts
+        #   name: Posts
+        #   url: posts/
+        #   weight: 10
         #- identifier: about
         #  name: about me
         #  url: about-me/
