@@ -105,11 +105,11 @@ languages:
       - "Softwareentwickler, Softwarearchitekt, Sotwareberater, Webentwickler, Mobile Anwendungen, Agile Softwareentwicklung, Testing, Virtualisierung, Java, Kotlin"
 
     menu:
-      main:
-        - identifier: posts
-          name: Posts
-          url: posts/
-          weight: 10
+      main: []
+        # - identifier: posts
+        #   name: Posts
+        #   url: posts/
+        #   weight: 10
         #- identifier: about
         #  name: über mich
         #  url: über-mich/

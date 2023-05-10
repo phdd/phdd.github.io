@@ -4,6 +4,7 @@ description: Convert Thunderbirds mails to user stories, tasks and tickets for t
 
 published: 2018-03-06
 excludeFromSitemap: true
+draft: true
 
 tags:
   - Thunderbird

@@ -4,6 +4,7 @@ description: "When being tired of writing Cypher queries for prototyping: A Neo4
 
 published: 2018-07-27
 cover: bg.png
+draft: true
 
 images:
   - bg.png

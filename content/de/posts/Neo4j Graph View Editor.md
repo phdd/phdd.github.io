@@ -4,6 +4,7 @@ description: "When being tired of writing Cypher queries for prototyping: A Neo4
 
 published: 2018-07-27
 excludeFromSitemap: true
+draft: true
 
 tags:
   - Neo4j
