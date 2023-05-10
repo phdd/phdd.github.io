@@ -12,7 +12,6 @@ Deubener Straße 6
 
 ## Kontakt
 
-Telefon: [0351 217 163 76](tel://035121716376)  
 E-Mail: [peter@heisig.rocks](mailto:peter@heisig.rocks)  
 Internet: [https://peter.heisig.rocks](https://peter.heisig.rocks)  
 
