@@ -93,7 +93,7 @@ params:
     - name: linkedin
       url: https://www.linkedin.com/in/peter-heisig
     - name: email
-      url: mailto:peter@heisig.rocks
+      url: mailto:software@heisig.rocks
 
 languages:
   de:
