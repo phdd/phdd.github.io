@@ -90,6 +90,8 @@ params:
       url: https://github.com/phdd
     - name: xing
       url: https://www.xing.com/profile/Peter_Heisig8
+    - name: linkedin
+      url: https://www.linkedin.com/in/peter-heisig
     - name: email
       url: mailto:peter@heisig.rocks
 
