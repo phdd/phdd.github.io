@@ -88,12 +88,10 @@ params:
   social:
     - name: github
       url: https://github.com/phdd
-    - name: xing
-      url: https://www.xing.com/profile/Peter_Heisig8
+    - name: matrix
+      url: https://matrix.to/#/@phdd:yatrix.org
     - name: linkedin
       url: https://www.linkedin.com/in/peter-heisig
-    - name: email
-      url: mailto:software@heisig.rocks
 
 languages:
   de:
